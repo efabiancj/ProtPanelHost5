@@ -26,7 +26,7 @@
     <dependencies>
     
         <dependency>
-             <groupId>Dependencies</groupId>
+             <groupId>com</groupId>
              <artifactId>Prot_panel_host5</artifactId>
              <version>1.0</version>
         </dependency>
