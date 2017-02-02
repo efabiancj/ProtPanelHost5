@@ -14,18 +14,18 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
-    <repositories>
+    <distributionManagement>
       <repository>
-         <id>localrepository</id>
+         <id>localrepo</id>
+         <name>repositorio_prot_panel</name>
          <url>http://138.68.13.48:88/repositoriom2/</url>
       </repository>
-    </repositories>
+    </distributionManagement>
     
     
     
     <dependencies>
-    
-        
+      
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
