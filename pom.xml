@@ -16,16 +16,20 @@
     
     <distributionManagement>
       <repository>
-         <id>server001</id>
+          <id>server001</id>
          <name>repositorio_prot_panel</name>
          <url>http://138.68.13.48:88/repositoriom2/</url>
       </repository>
     </distributionManagement>
-    
-    
+       
     
     <dependencies>
-      
+        <dependency>
+            <groupId>.</groupId>
+            <artifactId>Prot_panel_host5</artifactId>
+            <version>1.0</version>
+           
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
