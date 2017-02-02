@@ -16,8 +16,8 @@
     
     <distributionManagement>
       <repository>
-         <id>server001</id>
-         <name>repositorio_prot_panel</name>
+         <id>repo_server001</id>
+         <name>repositorio_prot_panel_server001</name>
          <url>http://138.68.13.48:88/repositoriom2/</url>
       </repository>
     </distributionManagement>
