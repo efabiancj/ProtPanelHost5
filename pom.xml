@@ -26,7 +26,7 @@
     <dependencies>
     
         <dependency>
-             <groupId>com.kapyasoft.pro_panel_host4</groupId>
+             <groupId>com.kapyasoft.pro_panel_host5</groupId>
              <artifactId>Prot_panel_host5</artifactId>
              <version>1.0</version>
         </dependency>
