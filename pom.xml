@@ -26,7 +26,7 @@
     <dependencies>
     
         <dependency>
-             <groupId>com</groupId>
+             <groupId>Prot_panel_host5</groupId>
              <artifactId>Prot_panel_host5</artifactId>
              <version>1.0</version>
         </dependency>
@@ -44,7 +44,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>ant</groupId>
+            <groupId>ant-junit</groupId>
             <artifactId>ant-junit</artifactId>
             <version>1.6.4</version>
             <scope>test</scope>
