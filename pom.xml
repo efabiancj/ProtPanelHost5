@@ -16,7 +16,7 @@
     
     <distributionManagement>
       <repository>
-          <id>server001</id>
+         <id>server001</id>
          <name>repositorio_prot_panel</name>
          <url>http://138.68.13.48:88/repositoriom2/</url>
       </repository>
@@ -24,22 +24,25 @@
        
     
     <dependencies>
-        <dependency>
-            <groupId>.</groupId>
-            <artifactId>Prot_panel_host5</artifactId>
-            <version>1.0</version>
-           
-        </dependency>
+        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
+        
         <dependency>
             <groupId>ant</groupId>
             <artifactId>ant</artifactId>
             <version>1.5</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <dependency>
+            <groupId>ant</groupId>
+            <artifactId>ant-junit</artifactId>
+            <version>1.6.4</version>
             <scope>test</scope>
         </dependency>
         
