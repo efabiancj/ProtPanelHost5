@@ -14,22 +14,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
-    <!--repositories>
+    <repositories>
       <repository>
          <id>localrepository</id>
          <url>http://138.68.13.48:88/repositoriom2/</url>
       </repository>
-    </repositories-->
+    </repositories>
     
     
     
     <dependencies>
     
-        <!--dependency>
+        <dependency>
              <groupId>com.kapyasoft.pro_panel_host4</groupId>
              <artifactId>Prot_panel_host5</artifactId>
              <version>1.0</version>
-        </dependency-->
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
