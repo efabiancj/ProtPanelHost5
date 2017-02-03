@@ -6,6 +6,7 @@
     <artifactId>Prot_panel_host5</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
+    
 
     <name>Prot_panel_host5</name>
 
@@ -19,6 +20,7 @@
          <id>repo_server001</id>
          <name>repositorio_prot_panel_server001</name>
          <url>http://138.68.13.48:88/repositoriom2/</url>
+         
       </repository>
     </distributionManagement>
        
@@ -55,6 +57,7 @@
     </dependencies>
 
     <build>
+        <finalName>Prot_panel_host5</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
