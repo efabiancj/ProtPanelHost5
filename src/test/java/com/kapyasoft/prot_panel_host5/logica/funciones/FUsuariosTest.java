@@ -200,8 +200,7 @@ public class FUsuariosTest {
         System.out.println("obtenerUsuariopor_campo_directorio_virtual");
         String directorio_virtual = "";
         ArrayList<Usuario> expResult = null;
-        ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_directorio_virtual(directorio_virtual);
-        assertEquals(expResult, result);
+        
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

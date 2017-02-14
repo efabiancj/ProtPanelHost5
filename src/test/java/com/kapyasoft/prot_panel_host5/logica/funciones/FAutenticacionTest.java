@@ -6,6 +6,8 @@
 package com.kapyasoft.prot_panel_host5.logica.funciones;
 
 import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
+import com.kapyasoft.prot_panel_host5.logica.clases.Aplicacion;
+import com.kapyasoft.prot_panel_host5.logica.funciones.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
