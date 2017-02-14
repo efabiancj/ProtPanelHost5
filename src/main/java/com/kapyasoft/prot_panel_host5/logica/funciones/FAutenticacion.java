@@ -22,10 +22,12 @@ import java.util.ArrayList;
  */
 public class FAutenticacion {
     public static Usuario Autenticar(String item,String pass) throws Exception {
-        
+       
         Usuario obj = null; 
 
         return obj;
     }
+    
+   
 
 }

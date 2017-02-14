@@ -4,7 +4,6 @@
  */
 package acceso;
 
-import acceso.Global;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -57,43 +56,90 @@ public class Conexion {
 
     public ResultSet ejecutaQuery(String sql) throws SQLException, ClassNotFoundException
     {
-            
+             setRs(null);
+            try {
+             Statement st = getCon().createStatement();
+             setRs(st.executeQuery(sql));
+        } catch (SQLException exConec) {
+              throw  exConec;
+            }
          return getRs();
     }
 
      public int ejecutaQueryEscalar(String sql) throws Exception
       {
         int res=0;
-          
+            try {
+             Statement st = getCon().createStatement();
+             res = st.executeUpdate(sql);
+        } catch (SQLException exConec) {
+                throw  exConec;
+            }
          return res;
       }
         public boolean ejecutaPreparedComando(PreparedStatement prStm) throws Exception
         {
-            
+            int i=-1;
+            try {
+            i= prStm.executeUpdate();
+        } catch (SQLException exConec) {
+               throw  exConec;
+        }
+       if(i>0)
+           return true;
+       else
            return false;
         }
 
           public int ejecutaPreparedInt(PreparedStatement prStm) throws Exception
         {
        int i=-1;
-            
+            try {
+             setRs(prStm.executeQuery());
+             while(getRs().next())
+            {
+                i=getRs().getInt(1);
+
+             }
+        } catch (SQLException exConec) {
+               throw  exConec;
+        }
         return i;
         }
 
        public ResultSet ejecutaPrepared(PreparedStatement prStm) throws Exception
         {
-        
+        setRs(null);
+            try {
+              setRs(prStm.executeQuery());
+        } catch (SQLException exConec) {
+                throw exConec;
+        }
         return getRs();
         }
          public PreparedStatement creaPreparedSmt(String sql) throws Exception
         {
-        
+        setPrStm(null);
+            try {
+              setPrStm(getCon().prepareStatement(sql));
+          } catch (SQLException exConec) {
+           throw  exConec;
+            }
+
          return getPrStm();
         }
 
          public void desconectar () throws Exception
          {
-            
+             try
+             {
+            getCon().close();
+            setCon(null);
+             }
+             catch(Exception ex)
+             {
+                 throw ex;
+             }
          }
 
     /**

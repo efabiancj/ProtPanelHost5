@@ -629,9 +629,9 @@ public class Prot_panel_interfacesIT {
    @Test
     public void boton_ingreso_nuevo_usuario__si_datos_correctos()
     {
-        System.setProperty("webdriver.gecko.driver", Global.gecodriver);
+        System.setProperty("webdriver.gecko.driver", Global.geckodriver);
         driver = new FirefoxDriver();
-        String url = Global.url_panel + "registro_usuario" + Global.ext;
+        String url = Global.url_aplicacion + "registro_usuario" + Global.ext;
         driver.get(url);
 
         //Now you can Initialize marionette driver to launch firefox
@@ -723,9 +723,9 @@ public class Prot_panel_interfacesIT {
      */
     @Test
     public void testBoton_logueo() {
-        System.setProperty("webdriver.gecko.driver", Global.gecodriver);
+        System.setProperty("webdriver.gecko.driver", Global.geckodriver);
         driver = new FirefoxDriver();
-        String url = Global.url_panel+"login"+Global.ext;
+        String url = Global.url_aplicacion+"login"+Global.ext;
         driver.get(url);   
         WebElement email  = driver.findElement(By.id("txtEmail"));
         WebElement clave  = driver.findElement(By.id("txtClave"));
