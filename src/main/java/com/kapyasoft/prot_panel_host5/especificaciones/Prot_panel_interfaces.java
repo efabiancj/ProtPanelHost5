@@ -15,11 +15,6 @@ public class Prot_panel_interfaces {
  /*-------------- componentes  --------------------*/
     //formulario_ingreso_usuario
     
-        int elemento_id_usuario()
-        {
-            return 0;
-        }
-        
         int elemento_nombre_usuario()
         {
             return 0;
@@ -228,6 +223,17 @@ public class Prot_panel_interfaces {
      }
      
 /*----------------- Eventos y procesos -----------------------  */       
+     
+     int boton_ingreso_nuevo_usuario()
+     {
+         return 0;
+     }
+         
+     int boton_nueva_aplicacion()
+     {
+         return 0;
+     }
+         
      
      int boton_logueo()
      {

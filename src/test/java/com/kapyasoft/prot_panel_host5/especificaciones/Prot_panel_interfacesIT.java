@@ -5,18 +5,31 @@
  */
 package com.kapyasoft.prot_panel_host5.especificaciones;
 
+import acceso.Global;
+import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 
 /**
  *
  * @author Edgar
  */
 public class Prot_panel_interfacesIT {
+    
+    static WebDriver driver;
+    static Wait<WebDriver> wait;
     
     public Prot_panel_interfacesIT() {
     }
@@ -37,32 +50,17 @@ public class Prot_panel_interfacesIT {
     public void tearDown() {
     }
 
-    /**
-     * Test of elemento_id_usuario method, of class Prot_panel_interfaces.
-     */
-    @Test
-    public void testElemento_id_usuario() {
-        System.out.println("elemento_id_usuario");
-        Prot_panel_interfaces instance = new Prot_panel_interfaces();
-        int expResult = 0;
-        int result = instance.elemento_id_usuario();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+    
     /**
      * Test of elemento_nombre_usuario method, of class Prot_panel_interfaces.
      */
     @Test
     public void testElemento_nombre_usuario() {
-        System.out.println("elemento_nombre_usuario");
-        Prot_panel_interfaces instance = new Prot_panel_interfaces();
-        int expResult = 0;
-        int result = instance.elemento_nombre_usuario();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+         //System.out.println("elemento_id_usuario");
+        
+        
+       fail("The test case is a prototype.");
+       // assertEquals(expResult, result);
     }
 
     /**
@@ -628,15 +626,128 @@ public class Prot_panel_interfacesIT {
     /**
      * Test of boton_logueo method, of class Prot_panel_interfaces.
      */
+   @Test
+    public void boton_ingreso_nuevo_usuario__si_datos_correctos()
+    {
+        System.setProperty("webdriver.gecko.driver", Global.gecodriver);
+        driver = new FirefoxDriver();
+        String url = Global.url_panel + "registro_usuario" + Global.ext;
+        driver.get(url);
+
+        //Now you can Initialize marionette driver to launch firefox
+        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+        capabilities.setCapability("marionette", true);
+
+        WebElement email = driver.findElement(By.id("txtEmail"));
+        WebElement nombre = driver.findElement(By.id("txtNombre"));
+        WebElement apell = driver.findElement(By.id("txtApellido"));
+        WebElement direcc = driver.findElement(By.id("txtDireccion"));
+        WebElement telf = driver.findElement(By.id("txtTelefono"));
+        WebElement clave = driver.findElement(By.id("txtClave"));
+
+        WebElement submit_button = driver.findElement(By.id("btnRegistrar"));
+        email.sendKeys("efabiancj@hotmail.com");
+        nombre.sendKeys("Edgar");
+        apell.sendKeys("Cordova");
+        direcc.sendKeys("Sn Jse Tapi");
+        telf.sendKeys("032602291");
+        clave.sendKeys("123456");
+
+        submit_button.click();
+        WebElement elemento_mensaje = null;
+        String mensaje = "";
+        try
+        {
+           elemento_mensaje = driver.findElement(By.id("lblmensaje"));
+           mensaje = elemento_mensaje.getText() ;
+           System.out.println(mensaje);
+          // Assert.assertTrue(mensaje.equalsIgnoreCase("Se ha ingresado un nuevo usuario."));
+           Assert.assertEquals(mensaje, "Se ha ingresado un nuevo usuario.");
+        }
+        catch(Exception ex)
+        {
+            fail("Error - No se ha ingresado el usuario."+ex.getMessage());
+        }
+        driver.close();
+    }
+
+    /**
+     * Test of boton_logueo method, of class Prot_panel_interfaces.
+     */
+  /* @Test
+    public void boton_ingreso_nuevo_usuario__si_falta_email()
+    {
+        System.setProperty("webdriver.gecko.driver", Global.gecodriver);
+        driver = new FirefoxDriver();
+        String url = Global.url_panel + "registro_usuario" + Global.ext;
+        driver.get(url);
+
+        //Now you can Initialize marionette driver to launch firefox
+        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+        capabilities.setCapability("marionette", true);
+
+        WebElement email = driver.findElement(By.id("txtEmail"));
+        WebElement nombre = driver.findElement(By.id("txtNombre"));
+        WebElement apell = driver.findElement(By.id("txtApellido"));
+        WebElement direcc = driver.findElement(By.id("txtDireccion"));
+        WebElement telf = driver.findElement(By.id("txtTelefono"));
+        WebElement clave = driver.findElement(By.id("txtClave"));
+
+        WebElement submit_button = driver.findElement(By.id("btnRegistrar"));
+        email.sendKeys("");
+        nombre.sendKeys("Edgar");
+        apell.sendKeys("Cordova");
+        direcc.sendKeys("Sn Jse Tapi");
+        telf.sendKeys("032602291");
+        clave.sendKeys("123456");
+
+        submit_button.click();
+        WebElement elemento_mensaje = null;
+        String mensaje = "";
+        try
+        {
+           elemento_mensaje = driver.findElement(By.id("lblmensaje"));
+           mensaje = elemento_mensaje.getText() ;
+           Assert.assertTrue(mensaje.equalsIgnoreCase("error - falta email de usuario."));
+           System.out.println(mensaje);
+        }
+        catch(Exception ex)
+        {
+            fail("La validacion ha fallado con email erroneo."+ex.getMessage());
+        }
+        driver.close();
+    }*/
+
+    /**
+     * Test of boton_logueo method, of class Prot_panel_interfaces.
+     */
     @Test
     public void testBoton_logueo() {
-        System.out.println("boton_logueo");
-        Prot_panel_interfaces instance = new Prot_panel_interfaces();
-        int expResult = 0;
-        int result = instance.boton_logueo();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.setProperty("webdriver.gecko.driver", Global.gecodriver);
+        driver = new FirefoxDriver();
+        String url = Global.url_panel+"login"+Global.ext;
+        driver.get(url);   
+        WebElement email  = driver.findElement(By.id("txtEmail"));
+        WebElement clave  = driver.findElement(By.id("txtClave"));
+        WebElement submit_button = driver.findElement(By.id("btnAutenticar"));
+                
+        email.sendKeys("efabiancj@hotmail.com");
+        clave.sendKeys("123456");
+        submit_button.click();
+        WebElement elemento_mensaje = null;
+        String mensaje = "";
+        try
+        {
+           elemento_mensaje = driver.findElement(By.id("lblmensaje"));
+           mensaje = elemento_mensaje.getText() ;
+           Assert.assertTrue(mensaje.equalsIgnoreCase("error - falta email de usuario."));
+           System.out.println(mensaje);
+        }
+        catch(Exception ex)
+        {
+            fail("La validacion ha fallado con email erroneo."+ex.getMessage());
+        }
+        driver.close();
     }
 
     /**

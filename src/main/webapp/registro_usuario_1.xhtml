@@ -16,15 +16,24 @@
             <h:body>
                 <div class="registro" >
                     <div id="id_form">
-                        <h:form id="formId" prependId="false" >
-
+                        <h:form id="formId" onsubmit="validar_formulario1('formId')">
+                            
                             <table  class="table_registro">
                                 <tr  class="tr1">
                                     <td >
                                 <h:outputText id="lblEmail" value="Email: " class="labels"> </h:outputText>
                                 </td>
                                 <td>
-                                <p:inputText  id="txtEmail"  value="#{cUsuario.email}"> </p:inputText>
+                                <p:inputText  id="txtEmail" onblur="validar_email('formId:txtEmail')" value="#{cUsuario.email}"> </p:inputText>
+                                </td>
+                                </tr>
+                                
+                                <tr  class="tr1">
+                                    <td >
+                                <h:outputText id="lblNickname" value="Nickname: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <p:inputText  id="txtNickname" onblur="validar_Nickname('formId:txtNickname')" value="#{cUsuario.nickname}"> </p:inputText>
                                 </td>
                                 </tr>
 
@@ -33,7 +42,7 @@
                                 <h:outputText id="lblNombre" value="Nombre: " class="labels"> </h:outputText>
                                 </td>
                                 <td>
-                                <p:inputText  id="txtNombre"  value="#{cUsuario.nombres}"> </p:inputText>
+                                <p:inputText styleClass="txtNombre" id="txtNombre" onblur="validar_solo_letras('formId:txtNombre');"  value="#{cUsuario.nombres}"> </p:inputText>
                                 </td>
                                 </tr>
 
@@ -42,7 +51,7 @@
                                 <h:outputText id="lblApellido" value="Apellido: " class="labels"> </h:outputText>
                                 </td>
                                 <td>
-                                <p:inputText  id="txtApellido"  value="#{cUsuario.apellidos}"> </p:inputText>
+                                <p:inputText styleClass="txtApellido" id="txtApellido" onblur="validar_solo_letras('formId:txtApellido');"  value="#{cUsuario.apellidos}"> </p:inputText>
                                 </td>
                                 </tr>
 
@@ -51,7 +60,7 @@
                                 <h:outputText id="lblDireccion" value="Direccion: " class="labels"> </h:outputText>
                                 </td>
                                 <td>
-                                <p:inputText  id="txtDireccion"   value="#{cUsuario.direccion}"> </p:inputText>
+                                <p:inputText styleClass="txtDireccion" id="txtDireccion" onblur="validar_solo_letras('formId:txtDireccion');"  value="#{cUsuario.direccion}"> </p:inputText>
                                 </td>
                                 </tr>
 
@@ -60,41 +69,55 @@
                                 <h:outputText id="lblTelefono" value="Telefono: " class="labels"> </h:outputText>
                                 </td>
                                 <td>
-                                <p:inputText  id="txtTelefono"  value="#{cUsuario.telefono}"> </p:inputText>
+                                <p:inputText styleClass="txtTelefono" id="txtTelefono" onblur="validar_solo_letras('formId:txtTelefono');"  value="#{cUsuario.telefono}"> </p:inputText>
                                 </td>
                                 </tr>
 
                                 <tr  class="tr1">
-                                    <td >
+                                <td >
                                 <h:outputText id="lblClave" value="Password: " class="labels"> </h:outputText>
                                 </td>
                                 <td>
-                                <p:inputText  id="txtClave"   value="#{cUsuario.clave}"> </p:inputText>
+                                <p:password styleClass="txtClave" id="txtClave" onblur="validar_solo_letras('formId:txtClave');"   value="#{cUsuario.clave}"> </p:password>
                                 </td>
                                 </tr>
 
-
-
                                 <tr  class="tr1">
-                                    <td>     <h:outputText value="ciudad" />    </td>
-                            <td>
-                            <h:selectOneMenu id="ciud1" value="#{cUsuario.ciudset}" required="true">  
-                                <f:selectItem itemLabel="Escoja" itemValue="" />  
-                                <f:selectItems value="#{cUsuario.lstciud}" 
-                                               var="ciud" itemLabel="#{ciud.nombre}" 
-                                               itemValue ="#{ciud.id}"/>                                                            
-                            </h:selectOneMenu> 
+                                <td >
+                                <h:outputText id="lblClaveRep" value="Repetir: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <p:password styleClass="txtClave" id="txtClaveRep" onblur="validar_solo_letras('formId:txtClaveRep');"   value="#{cUsuario.claveRep}"> </p:password>
+                                </td>
+                                </tr>
+                                
+                                
+                                
+                                <tr  class="tr1">
+                                <td>
+                                <h:outputText value="ciudad" />
+                                </td>
+                                <td>
+                                <h:selectOneMenu id="ciud1" value="#{cUsuario.ciudset}" required="true">  
+                                    <f:selectItem itemLabel="Escoja" itemValue="" />  
+                                    <f:selectItems value="#{cUsuario.lstciud}" 
+                                                   var="ciud" itemLabel="#{ciud.nombre}" 
+                                                   itemValue ="#{ciud.id}"/>  
+                                </h:selectOneMenu> 
                                 </td>
                                 </tr>
 
 
                                 <tr  class="tr2">
-                                    <td > 
-                                <p:commandButton id="btnRegistrar"  value="Registrar"  action="#{cUsuario.ingresar_usuario()}" update="lblmensaje"   > 
-                                </p:commandButton>
+                                <td >
+                                <h:commandButton id="btnRegistrar"  value="Registrar" styleClass="boton1"  action="#{cUsuario.ingresar_usuario}"  > 
+                                </h:commandButton>
                                 </td>
+
                                 </tr>
+
                             </table>
+
                         </h:form>
                     </div>
                     <div id="divmensajes">
