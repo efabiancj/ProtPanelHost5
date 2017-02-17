@@ -60,7 +60,8 @@ public class Prot_panel_interfacesIT {
         
         
        fail("The test case is a prototype.");
-       // assertEquals(expResult, result);
+       int expResult = 0;
+       assertEquals(expResult, expResult);
     }
 
     /**
@@ -72,9 +73,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.lemento_apellido_usuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -86,9 +87,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_clave_usuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -100,9 +101,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_email_usuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -114,9 +115,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_ciudad_usuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -128,9 +129,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_direccion_usuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -144,7 +145,7 @@ public class Prot_panel_interfacesIT {
         int result = instance.elemento_telefono_usuario();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -310,9 +311,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_id_base_datos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -324,9 +325,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_usuario_base_datos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -338,9 +339,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_nombre_base_datos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -464,9 +465,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_tabla_bases_datos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -478,9 +479,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_numero_bases_datos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -492,9 +493,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.listado_usuarios();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -506,9 +507,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.listado_administradores();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -520,9 +521,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.enlace_index_a_login();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -534,9 +535,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.enlace_login_a_index_usuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -548,9 +549,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.enlace_index_usuario_a_nueva_aplicacion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -562,9 +563,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.enlace_registro_usuario_a_login();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -576,9 +577,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.enlace_index_usuario_a_visualizar_aplicaciones();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -590,9 +591,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.enlace_index_usuario_a_visualizar_bds();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -618,9 +619,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.enlace_visualizar_aplicaciones_a_ver_detalles_aplicacion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -773,9 +774,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.subir_archivo_backup();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
     
 }

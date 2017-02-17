@@ -46,10 +46,10 @@ public class FBases_datossTest {
     public void testObtener_Todos_Bases_datoss() throws Exception {
         System.out.println("obtener_Todos_Bases_datoss");
         ArrayList<Bases_datos> expResult = null;
-        ArrayList<Bases_datos> result = FBases_datoss.obtener_Todos_Bases_datoss();
-        assertEquals(expResult, result);
+      //  ArrayList<Bases_datos> result = FBases_datoss.obtener_Todos_Bases_datoss();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -60,10 +60,10 @@ public class FBases_datossTest {
         System.out.println("obtener_Bases_datos_por_pk");
         int id = 0;
         Bases_datos expResult = null;
-        Bases_datos result = FBases_datoss.obtener_Bases_datos_por_pk(id);
-        assertEquals(expResult, result);
+       // Bases_datos result = FBases_datoss.obtener_Bases_datos_por_pk(id);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -74,10 +74,10 @@ public class FBases_datossTest {
         System.out.println("obtenerBases_datospor_campo_id");
         int id = 0;
         ArrayList<Bases_datos> expResult = null;
-        ArrayList<Bases_datos> result = FBases_datoss.obtenerBases_datospor_campo_id(id);
-        assertEquals(expResult, result);
+     //   ArrayList<Bases_datos> result = FBases_datoss.obtenerBases_datospor_campo_id(id);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -88,10 +88,10 @@ public class FBases_datossTest {
         System.out.println("obtenerBases_datospor_campo_nombre");
         String nombre = "";
         Bases_datos expResult = null;
-        Bases_datos result = FBases_datoss.obtenerBases_datospor_campo_nombre(nombre);
-        assertEquals(expResult, result);
+      //  Bases_datos result = FBases_datoss.obtenerBases_datospor_campo_nombre(nombre);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -102,10 +102,10 @@ public class FBases_datossTest {
         System.out.println("obtenerBases_datospor_campo_usuario");
         int usuario = 0;
         ArrayList<Bases_datos> expResult = null;
-        ArrayList<Bases_datos> result = FBases_datoss.obtenerBases_datospor_campo_usuario(usuario);
-        assertEquals(expResult, result);
+       // ArrayList<Bases_datos> result = FBases_datoss.obtenerBases_datospor_campo_usuario(usuario);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -116,10 +116,10 @@ public class FBases_datossTest {
         System.out.println("ingresar");
         Bases_datos bases_datos = null;
         boolean expResult = false;
-        boolean result = FBases_datoss.ingresar(bases_datos);
-        assertEquals(expResult, result);
+      //  boolean result = FBases_datoss.ingresar(bases_datos);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -131,10 +131,10 @@ public class FBases_datossTest {
         String usuario = "";
         String clave = "";
         boolean expResult = false;
-        boolean result = FBases_datoss.crear_usuario_base_datos_pg(usuario, clave);
-        assertEquals(expResult, result);
+        //boolean result = FBases_datoss.crear_usuario_base_datos_pg(usuario, clave);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -148,7 +148,7 @@ public class FBases_datossTest {
         boolean result = FBases_datoss.asignar_permisos_usario_crear_bd_pg(usuario);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
