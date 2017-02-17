@@ -12,6 +12,8 @@ package com.kapyasoft.prot_panel_host5.controladores;
 
 import com.kapyasoft.prot_panel_host5.logica.clases.Grupo;
 import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
+import com.kapyasoft.prot_panel_host5.logica.funciones.FAutenticacion;
+import com.kapyasoft.prot_panel_host5.logica.funciones.FUsuarios;
 import java.io.IOException;
 import java.util.List;
 import javax.faces.application.FacesMessage;
@@ -23,6 +25,8 @@ import javax.faces.event.ComponentSystemEvent;
 import javax.servlet.http.HttpSession;
 
 
+
+
 /**
  *
  * @author efabiancj
@@ -31,11 +35,11 @@ import javax.servlet.http.HttpSession;
 @SessionScoped
 public class ControladorAcceso {
 
-    private static final long serialVersionUID = 1L; 
+   // private static final long serialVersionUID = 1L; 
     static private String login;
     
     private String password;
-    private String mensaje;
+    
     private boolean isLoggedIn;
     static public Usuario usuario;
     static private Grupo grupo;
@@ -57,7 +61,8 @@ public class ControladorAcceso {
         this.usuario = usuario;
     }
     
-   
+
+    
     public String getLogin() {
         return login;
     }
@@ -88,14 +93,60 @@ public class ControladorAcceso {
 
     
     public void autenticar() {
-        //mensaje = "autenticado con exito";
-        mensaje = "Error - La autenticacion ha fallado.";
-        FacesContext.getCurrentInstance().addMessage("lblmensaje", new FacesMessage(mensaje));
+       FacesContext.getCurrentInstance().addMessage("intentando autenticar.."+getLogin()+" "+getPassword(),new FacesMessage("intentando autenticar con datos:"+getLogin()+" "+getPassword()));
+       String pass= "";
+       Usuario usuario_buscado = null;
+       try
+       {
+           usuario_buscado = FUsuarios.obtener_Usuario_por_email(this.login);
+           if(usuario_buscado != null)
+           {    
+           //String  pass_no_encrip = this.password;
+           //pass = FStrings.encriptar_cod3(pass_no_encrip,usuario_buscado.getId()+""); 
+           pass = this.password;
+      
+           this.usuario = FAutenticacion.Autenticar(this.login, pass);
+           if((usuario != null))
+             {
+                this.grupo = usuario.getGrupo();
+                if(usuario.getEstado().equalsIgnoreCase("A"))
+                {
+                    
+                    FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("USUARIO",this.usuario);
+                    HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true);
+                    System.out.println("usuario encontrado "+this.password+" "+ this.login);
+                    isLoggedIn=true;
+                    FacesContext.getCurrentInstance().getExternalContext().redirect("panel_cliente.xhtml");
+                 }
+              }
+              else
+              {
+                    FacesContext.getCurrentInstance().addMessage("clave incorrecta..",new FacesMessage("clave incorrecta"));
+                    System.out.println("clave incorrecta "+this.password+" "+ this.login);
+                    isLoggedIn=false;
+              }
+           }
+           else //si no encuentra correo
+           {
+                        FacesContext.getCurrentInstance().addMessage("no se encuentra e usuario..",new FacesMessage("no se encuentra e usuario"));
+                        System.out.println("no se encuentra e usuario"+this.password+" "+ this.login);
+                        isLoggedIn=false;
+           }
+       }
+       catch(Exception ex)
+       {
+          FacesContext.getCurrentInstance().addMessage("Error: "+ex.getMessage(),new FacesMessage("Error: "+ex.getMessage()));
+          System.out.println("Error al loguearse usuario: "+this.login+" pass:"+this.password+ex.getMessage());
+       }
     }
 
     public void logout()
     {
-       
+        System.out.println("Intentando cerrar sesion");
+        HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(false);
+        session.invalidate();
+        isLoggedIn=false;
+        doRedirect("index.xhtml");
     }
     /**
      * An event listener for redirecting the user to login page if he/she is not
@@ -104,11 +155,23 @@ public class ControladorAcceso {
      * @param event
      */
    public void verifyUseLogin(ComponentSystemEvent event) {
- 
+        if (!isLoggedIn)
+        {
+            doRedirect("login.xhtml");
+        }
     }
     
     public void registrar()
     {
+        try
+        {
+           FacesContext context = FacesContext.getCurrentInstance();
+            context.getExternalContext().redirect("registro.xhtml");
+        }
+        catch(Exception er)
+        {
+            
+        }
         
     }
 
@@ -118,7 +181,13 @@ public class ControladorAcceso {
      * @param url
      */
     private void doRedirect(String url) {
-     }
+        try {
+            FacesContext context = FacesContext.getCurrentInstance();
+            context.getExternalContext().redirect(url);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     
     static public String Sesion()
     {
@@ -133,12 +202,12 @@ public class ControladorAcceso {
         this.grupo = grupo;
     }
 
-    public String getMensaje() {
-        return mensaje;
+    void setMensaje(String mensaje) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setMensaje(String mensaje) {
-        this.mensaje = mensaje;
+    String getMensaje() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
       

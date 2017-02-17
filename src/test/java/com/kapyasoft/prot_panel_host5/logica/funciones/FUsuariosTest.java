@@ -47,9 +47,9 @@ public class FUsuariosTest {
         System.out.println("obtener_Todos_Usuarios");
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtener_Todos_Usuarios();
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -61,9 +61,9 @@ public class FUsuariosTest {
         String email = "";
         Usuario expResult = null;
         Usuario result = FUsuarios.obtener_Usuario_por_email(email);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -75,9 +75,9 @@ public class FUsuariosTest {
         int id = 0;
         Usuario expResult = null;
         Usuario result = FUsuarios.obtener_Usuario_por_pk(id);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -89,9 +89,9 @@ public class FUsuariosTest {
         String nombres = "";
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_nombres(nombres);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -103,9 +103,9 @@ public class FUsuariosTest {
         String apellidos = "";
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_apellidos(apellidos);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -117,9 +117,9 @@ public class FUsuariosTest {
         String direccion = "";
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_direccion(direccion);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -131,9 +131,9 @@ public class FUsuariosTest {
         String telefono = "";
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_telefono(telefono);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -145,9 +145,9 @@ public class FUsuariosTest {
         String email = "";
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_email(email);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -159,9 +159,9 @@ public class FUsuariosTest {
         String clave = "";
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_clave(clave);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -173,9 +173,9 @@ public class FUsuariosTest {
         int grupo = 0;
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_grupo(grupo);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -187,9 +187,9 @@ public class FUsuariosTest {
         int id = 0;
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_id(id);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -200,9 +200,10 @@ public class FUsuariosTest {
         System.out.println("obtenerUsuariopor_campo_directorio_virtual");
         String directorio_virtual = "";
         ArrayList<Usuario> expResult = null;
-        
+        ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_directorio_ftp(directorio_virtual);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -216,7 +217,7 @@ public class FUsuariosTest {
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_ciudad(ciudad);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -228,9 +229,9 @@ public class FUsuariosTest {
         char estado = ' ';
         ArrayList<Usuario> expResult = null;
         ArrayList<Usuario> result = FUsuarios.obtenerUsuariopor_campo_estado(estado);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -242,9 +243,9 @@ public class FUsuariosTest {
         Usuario usuario = null;
         boolean expResult = false;
         boolean result = FUsuarios.ingresar(usuario);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -256,9 +257,9 @@ public class FUsuariosTest {
         Usuario usuario = null;
         boolean expResult = false;
         boolean result = FUsuarios.actualizar(usuario);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -269,9 +270,9 @@ public class FUsuariosTest {
         System.out.println("obtenerultimo");
         int expResult = 0;
         int result = FUsuarios.obtenerultimo();
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
     
 }

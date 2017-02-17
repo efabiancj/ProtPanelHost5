@@ -550,7 +550,7 @@ public class CUsuarioIT {
         System.out.println("generar_directorios");
         CUsuario instance = new CUsuario();
         String expResult = "";
-        String result = instance.generar_directorios();
+        String result = instance.generar_directorio_ftp_real(expResult);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

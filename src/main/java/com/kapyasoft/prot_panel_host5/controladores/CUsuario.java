@@ -10,6 +10,9 @@ package com.kapyasoft.prot_panel_host5.controladores;
  * @author Edgar
  */
 import acceso.Global;
+import clases_utiles.FStrings;
+import clases_utiles.Terminal;
+import com.kapyasoft.prot_panel_host5.especificaciones.Prot_panel_host;
 import com.kapyasoft.prot_panel_host5.logica.clases.Ciudad;
 import com.kapyasoft.prot_panel_host5.logica.clases.Grupo;
 import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
@@ -29,6 +32,7 @@ import javax.faces.bean.ViewScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 
+
 /**
  *
  * @author efabiancj
@@ -40,64 +44,63 @@ import javax.faces.context.FacesContext;
 @RequestScoped
 public  class CUsuario implements Serializable{
 
-    Usuario usuario;
-    ArrayList<Usuario> usuarios;
-    ArrayList<Ciudad> lstciud;
+    private Usuario usuario;
+    private ArrayList<Usuario> usuarios;
+    private ArrayList<Ciudad> lstciud;
     
-    String nombres;
-    String apellidos;
-    String direccion;
-    String telefono;
-    String email;
-    String clave;
-    Grupo grupo;
-    int id;
-    String directorio_virtual;
-    Ciudad ciudad;
-    String estado;
+    private String nombres;
+    private String apellidos;
+    private String direccion;
+    private String telefono;
+    private String email;
+    private String clave;
+
+    private Grupo grupo;
+    private int id;
+    private String directorio_virtual;
+    private Ciudad ciudad;
+    private String estado;
    
-    String ciudset;
-    String mensaje;
-    int ultimo;
-   
+    private String ciudset;
+    private String mensaje;
+    private String nickname;
+    private int ultimo;
+    private String sugerencia;
+    private String claveRep;
+ 
     public CUsuario() {
-      // mensaje = "";
-        this.lstciud = new ArrayList<>();
-        this.usuarios = new ArrayList<Usuario>();
-        this.usuario = new Usuario();
-        this.apellidos = "";
-        this.direccion = "";
-        this.telefono = "";
-        this.email = "";
-        this.clave = "";
-        this.grupo = new Grupo();
-        this.id = 0;
-        this.directorio_virtual = "";
-        this.ciudad = new Ciudad();
-        this.estado = "";
-        this.ciudset = "Escoja";
-        this.ultimo = 0;
+        mensaje = "";
+        grupo= new Grupo();
+        grupo.setId(2);
+        try
+        {
+           lstciud=FCiudads.obtener_Todos_Ciudads();
+        } 
+        catch(Exception ex)
+        {
+            mensaje = ex.getMessage();
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, mensaje, "My bad!"));
+        }
+        
+        try
+        {
+           ultimo = FUsuarios.obtenerultimo();
+        } 
+        catch(Exception ex)
+        {
+            mensaje += ex.getMessage();
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, mensaje, "My bad!"));
+        }
+
+        directorio_virtual = "generando"  ;
+        estado = "A" ;
+        id = ultimo+1 ;
     }
 
-    public CUsuario(Usuario usuario, ArrayList<Usuario> usuarios, String apellidos, String direccion, String telefono, String email, String clave, Grupo grupo, int id, String directorio_virtual, Ciudad ciudad, String estado, String ciudset, String mensaje, int ultimo) {
-        this.usuario = usuario;
-        this.usuarios = usuarios;
-        this.apellidos = apellidos;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.email = email;
-        this.clave = clave;
-        this.grupo = grupo;
-        this.id = id;
-        this.directorio_virtual = directorio_virtual;
-        this.ciudad = ciudad;
-        this.estado = estado;
-        this.ciudset = ciudset;
-        this.mensaje = mensaje;
-        this.ultimo = ultimo;
-    }
-
-  
+      public String borrar_ultimos_caracteres(String d,String f)
+      {
+          return "";
+      }
 
     public String getCiudset() {
         return ciudset;
@@ -107,7 +110,10 @@ public  class CUsuario implements Serializable{
         this.ciudset = ciudset;
     }
 
-
+     public String borrar_ultimos_caracteres()
+     {
+         return "";
+     }
    
     public String getMensaje() {
         return mensaje;
@@ -147,7 +153,12 @@ public  class CUsuario implements Serializable{
 
     public void listar_usuarios()
     {
-        
+        try {
+            usuarios=FUsuarios.obtener_Todos_Usuarios();
+            mensaje = "Usuarios cargados correctamente";
+        } catch (Exception ex) {
+            Logger.getLogger(CUsuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public ArrayList<Ciudad> getLstciud() {
@@ -245,25 +256,172 @@ public  class CUsuario implements Serializable{
     public void setEstado(String estado) {
         this.estado = estado;
     }
- 
-    public void ingresar_usuario(){
+    
+    
+    
+    public void ingresar_usuario() {
         
-        //mensaje = "Se ha ingresado un nuevo usuario.";
-        mensaje = "Error - No se ha ingresado el usuario.";
-        FacesContext.getCurrentInstance().addMessage("lblmensaje", new FacesMessage(mensaje));
+        Usuario repetido = null;
+        usuario = new Usuario();
+        usuario.setEmail(email);
+        usuario.setGrupo(grupo);
+        int id_ciud= Integer.parseInt(ciudset);
+        try
+        {
+           ciudad = FCiudads.obtener_Ciudad_por_pk(id_ciud);
+        }
+        catch(Exception ex)
+        {
+        }
+        usuario.setCiudad(ciudad);
+        usuario.setApellidos(apellidos);
+        usuario.setNombres(nombres);
+       // String pass = FStrings.encriptar_cod3(clave,""+id);
+        usuario.setClave(clave);
+        usuario.setDireccion(direccion);
+        usuario.setTelefono(telefono);
+        usuario.setEstado(estado);
+        usuario.setId(id);
+        usuario.setDirectorio_ftp(generar_nombre_directorio());
+        usuario.setNickname(nickname);        
+        
+        
+        mensaje = mensaje+ "ingresando user: "+
+                usuario.getId()+" "+
+                usuario.getApellidos() +
+                usuario.getNombres() +
+                usuario.getTelefono()+
+                " estado "+ usuario.getEstado()  +
+                
+                usuario.getClave() +
+                usuario.getCiudad().getNombre()+
+                usuario.getGrupo().getDescripcion()+
+                usuario.getNickname();
+        try {
+            repetido = FUsuarios.obtener_Usuario_por_email(usuario.getEmail()); //validacion del lado del servidor
+            System.out.println("repetido "+repetido);
+            if (!(repetido == null)) {
+
+                mensaje = mensaje+ "Ya existe ese email ";
+                System.out.println(mensaje);
+            }
+            else 
+            {
+                repetido = FUsuarios.obtener_Usuario_por_nickname(usuario.getNickname());//validacion del lado del servidor
+                System.out.println("repetido nickname "+repetido);
+                if (!(repetido == null)) 
+                {
+                }
+                else
+                {
+                    System.out.println("no repetido nickname"+repetido);
+                   if (FUsuarios.ingresar(usuario)) {
+                            String directorio_a_crear = FStrings.borrar_ultimos_caracteres(usuario.getDirectorio_ftp(),1);
+                            generar_directorio_ftp_real(directorio_a_crear);
+                            crear_usuario_bd();
+                            mensaje = mensaje+ "Ingresado con exito :";
+
+                          // FacesContext.getCurrentInstance().addMessage("lblmensaje", new FacesMessage(mensaje));
+                            System.out.println(mensaje);
+                            FacesContext.getCurrentInstance().getExternalContext().redirect("login.xhtml");
+                        } else {
+                            mensaje = mensaje+  "A ocurrido un error el usuario no se ha ingresado:";
+                            System.out.println(mensaje);
+                    }
+                }
+                
+            }
+        } catch (Exception ex) {
+            mensaje = mensaje+ "Este es el error: " + ex.getMessage();
+            System.out.println(mensaje+ex.getMessage());
+
+        }
+        System.out.println(mensaje);
+    }
+    
+    public boolean controlar_nickname()
+    {
+        boolean res=false;
+        
+        return res;
     }
     
     public String generar_nombre_directorio()
     {
         String res="";
-
+        res = Global.dir_base_usuarios+nickname+Global.separador_dir;  //separador==/ o \\
         return res;
     }
     
-    public String generar_directorios()
+    public String generar_sugerencia_nickname()
     {
         String res="";
-
+        res = FStrings.separarCorreo(usuario.getEmail()+"_"+usuario.getId());
         return res;
     }
+    
+    public String generar_directorio_ftp_real(String path)
+    {
+        String res="";
+        Prot_panel_host p = new Prot_panel_host();
+        try
+        {
+        if(Terminal.crear_directorio_linux(path))
+        {
+            mensaje = "Directorios de usuario generados";
+            FacesContext.getCurrentInstance().addMessage("lblmensaje", new FacesMessage(mensaje));
+            System.out.println(mensaje);
+        }
+        }
+        catch(Exception ex)
+        {
+        System.out.println(ex.getMessage());}
+        return res;
+    }
+    
+    public int crear_usuario_bd()
+    {
+        int res=0;
+        try
+        {
+            
+        }
+        catch(Exception ex)
+        {
+        }
+        return res;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
+    }
+
+    public int getUltimo() {
+        return ultimo;
+    }
+
+    public void setUltimo(int ultimo) {
+        this.ultimo = ultimo;
+    }
+
+    public String getSugerencia() {
+        return sugerencia;
+    }
+
+    public void setSugerencia(String sugerencia) {
+        this.sugerencia = sugerencia;
+    }
+
+    public String getClaveRep() {
+        return claveRep;
+    }
+
+    public void setClaveRep(String claveRep) {
+        this.claveRep = claveRep;
+    }
+    
 }
