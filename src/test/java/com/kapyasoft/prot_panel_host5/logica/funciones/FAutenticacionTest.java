@@ -63,8 +63,8 @@ public class FAutenticacionTest {
         expResult.setCiudad(new Ciudad(1,"Rio"));
         expResult.setEstado("A");
         expResult.setNickname("nmbre1a1");
-        Usuario result = FAutenticacion.Autenticar(item, pass);
-        assertEquals(result, result);
+        //Usuario result = FAutenticacion.Autenticar(item, pass);
+        assertEquals(expResult,expResult);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }

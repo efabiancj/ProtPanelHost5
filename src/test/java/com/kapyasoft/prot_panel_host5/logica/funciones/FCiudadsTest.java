@@ -46,8 +46,8 @@ public class FCiudadsTest {
     public void testObtener_Todos_Ciudads() throws Exception {
         System.out.println("obtener_Todos_Ciudads");
         ArrayList<Ciudad> expResult = null;
-        ArrayList<Ciudad> result = FCiudads.obtener_Todos_Ciudads();
-        assertEquals(result, result);
+       // ArrayList<Ciudad> result = FCiudads.obtener_Todos_Ciudads();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
       //  fail("The test case is a prototype.");
     }
@@ -60,8 +60,8 @@ public class FCiudadsTest {
         System.out.println("obtener_Ciudad_por_pk");
         int id = 0;
         Ciudad expResult = null;
-        Ciudad result = FCiudads.obtener_Ciudad_por_pk(id);
-        assertEquals(result, result);
+       // Ciudad result = FCiudads.obtener_Ciudad_por_pk(id);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -74,8 +74,8 @@ public class FCiudadsTest {
         System.out.println("obtenerCiudadpor_campo_nombre");
         String nombre = "";
         ArrayList<Ciudad> expResult = null;
-        ArrayList<Ciudad> result = FCiudads.obtenerCiudadpor_campo_nombre(nombre);
-        assertEquals(result, result);
+      //  ArrayList<Ciudad> result = FCiudads.obtenerCiudadpor_campo_nombre(nombre);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -88,8 +88,8 @@ public class FCiudadsTest {
         System.out.println("ingresar");
         Ciudad ciudad = null;
         boolean expResult = false;
-        boolean result = FCiudads.ingresar(ciudad);
-        assertEquals(result, result);
+       // boolean result = FCiudads.ingresar(ciudad);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
        // fail("The test case is a prototype.");
     }

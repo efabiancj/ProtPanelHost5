@@ -14,7 +14,7 @@ public class FUsuarios {
         ArrayList<Usuario> lst = new ArrayList<Usuario>();
         Usuario obj = null;
         ConjuntoResultado cres = null;
-        String sql = " SELECT   nombres, apellidos, direccion, telefono, email, clave, grupo, id, directorio_ftp, ciudad, estado FROM public.usuario;";
+        String sql = " SELECT   nombres, apellidos, direccion, telefono, email, clave, grupo, id, directorio_ftp, ciudad, estado, nickname FROM public.usuario;";
         try {
             cres = AccesoDatos.ejecutaQuery(sql);
             while (cres.next()) {
@@ -34,7 +34,7 @@ public class FUsuarios {
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en Obtener todos los Usuario");
+            throw new Exception("Error al ejecutar la sentencia en Obtener todos los Usuario"+ex.getMessage());
         }
         return lst;
     }
@@ -92,7 +92,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 obj.setNickname(cres.getString("nickname"));
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por nickname;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por nickname;"+ex.getMessage());
         }
         return obj;
     }
@@ -121,7 +121,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 obj.setNickname(cres.getString("nickname"));
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por pk;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por pk;"+ex.getMessage());
         }
         return obj;
     }
@@ -152,7 +152,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -183,7 +183,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -214,7 +214,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -245,7 +245,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -276,7 +276,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -307,7 +307,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -338,7 +338,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -369,7 +369,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -400,7 +400,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -431,7 +431,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -462,7 +462,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 lst.add(obj);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por campotabla;"+ex.getMessage());
         }
         return lst;
     }
@@ -536,7 +536,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 eje = true;
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en actualizar Usuario ");
+            throw new Exception("Error al ejecutar la sentencia en actualizar Usuario "+ex.getMessage());
         }
         return eje;
     }
@@ -554,7 +554,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 eje = true;
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en eliminar Usuario ");
+            throw new Exception("Error al ejecutar la sentencia en eliminar Usuario "+ex.getMessage());
         }
         return eje;
     }
@@ -570,7 +570,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 res = cres.getInt(0);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar ultimo usuario;");
+            throw new Exception("Error al ejecutar la sentencia en buscar ultimo usuario;"+ex.getMessage());
         }
         return res;
     }
