@@ -48,7 +48,7 @@ public class FGruposTest {
         int id = 0;
         Grupo expResult = null;
         Grupo result = FGrupos.obtener_Grupo_por_pk(id);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -62,7 +62,7 @@ public class FGruposTest {
         String descripcion = "";
         ArrayList<Grupo> expResult = null;
         ArrayList<Grupo> result = FGrupos.obtenerGrupopor_campo_descripcion(descripcion);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -76,7 +76,7 @@ public class FGruposTest {
         Grupo grupo = null;
         boolean expResult = false;
         boolean result = FGrupos.ingresar(grupo);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

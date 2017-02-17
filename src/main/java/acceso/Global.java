@@ -53,15 +53,14 @@ public final  class Global {
         this.PASS = PASS;
     }
 
-   
+      
+    public  static String   ext=".jsf";
     
-    
-    
-//    public  static String SO="WIN";
+   // public  static String SO="WIN";
     public  static String SO="LIN";
     
-////    LINUX
-    public  static String   dir_base_aplicacion     = "/opt/glassfish4/glassfish/domains/domain1/applications/Prot_Panel_hostv3/"; 
+//    LINUX
+    public  static String   dir_base_aplicacion     = "/opt/glassfish4/glassfish/domains/domain1/applications/Modulos_protpanel/"; 
     public  static String   dir_base_war_aplicacion = "/opt/glassfish4/glassfish/domains/domain1/applications/"; 
     public  static String   dir_base_repo_m2_aplicacion = "/var/lib/jenkins/.m2/repository/";
    
@@ -69,19 +68,21 @@ public final  class Global {
     public  static String   dir_repositorio_svn         = "/home/usuarios_host/svn/";
     public  static String   dir_repositorio_git         = "/home/usuarios_host/git/";
     public  static String   dir_base_ftp_apli_usuario   = "/home/usuarios_host/ftp/";
-    public  static String   dir_base_war_usuario        = "/opt/glassfish4/glassfish/domains/domain1/applications/users/"; 
+    public  static String   dir_base_war_usuario        = "/opt/glassfish4/glassfish/domains/domain1/applications/"; 
     public  static String   dir_base_tmp_scrip_usr      = "/tmp/usuarios/";
     public  static String   separador_dir               = "/";
-    public  static String   directorio_bin_glassfish    = "/opt/glassfish4/bin";
-//  public  static String   directorio_bin_glassfish ="/opt/glassfish4/glassfish/bin/asadmin";
-//  public  static String   directorio_bin_glassfish ="/opt/glassfish4/glassfish/lib/asadmin";
-//  public  static String   directorio_bin_glassfish ="/usr/bin/asadmin";
+    //public  static String   directorio_bin_glassfish    = "/opt/glassfish4/bin";
+    public  static String   directorio_bin_glassfish ="/opt/glassfish4/glassfish/bin";
+////  public  static String   directorio_bin_glassfish ="/opt/glassfish4/glassfish/lib/asadmin";
+////  public  static String   directorio_bin_glassfish ="/usr/bin/asadmin";
     
     public  static String   directorio_app_glasfish_domain = "/domain1/applications/";
     public  static String   directorio_padre_glassfish     = "/opt/glassfish4/glassfish/";
-    public  static String   directorio_bin_pg              = "/usr/pgsql-9.4/bin";
-    public  static String   geckodriver                    = "/opt/driver/geckodriver";
-     public  static String   ext                           = ".jsf";
+    //public  static String   directorio_bin_pg              = "/usr/pgsql-9.4/bin";
+    public  static String   directorio_bin_pg              = "/usr/bin";
+    public  static String   dir_autodeploy                 = "/opt/glassfish4/glassfish/domains/domain1/autodeploy/";
+    public  static String   directorio_a_copiar            = "/home/directorio/";
+    public  static String   geckodriver                    = "";
     
 //    //WINDOWS
 //    public  static String   dir_base_aplicacion      = "E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\"; 
@@ -110,7 +111,7 @@ public final  class Global {
     //public static String    host="Kapiasoft.com";
     public static String    host ="138.68.13.48";
     public static String    puerto_pg="5432";
-    public static String    dns_host ="http://www.Kapiasoft.com/Prot_panel_host5";
+    public static String    dns_host ="http://www.Kapiasoft.com/Prot_panel_hostv3";
     public static int       tiempo_enlace=3600000;  //milisegundos
     //public  static String directorio = new File("").getAbsolutePath()+"\\";
         
@@ -118,10 +119,8 @@ public final  class Global {
     public  static String  url_pg_temp  = "jdbc:postgresql://localhost:5432/";
     public  static String  usuario      = "postgres";
     public  static String  clave        = "123456";
-    public  static String  url_aplicacion = "http://138.68.13.48:8080/Prot_panel_host5/";
-    
     public static int anio_actual=2017;
-    
+    public  static String  url_app        = "http://138.68.13.48:8080/Prot_panel_host5/";
     public ResourceBundle getConfiguracion() {
         return Configuracion;
     }

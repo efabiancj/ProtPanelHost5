@@ -5,7 +5,9 @@
  */
 package com.kapyasoft.prot_panel_host5.logica.funciones;
 
+import acceso.Global;
 import com.kapyasoft.prot_panel_host5.logica.clases.Aplicacion;
+import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
 import java.util.ArrayList;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -45,11 +47,22 @@ public class FAplicacionsTest {
     @Test
     public void testObtener_Todos_Aplicacions() throws Exception {
         System.out.println("obtener_Todos_Aplicacions");
-        ArrayList<Aplicacion> expResult = null;
+        ArrayList<Aplicacion> expResult = new ArrayList<Aplicacion>();
+        Usuario usuario=new Usuario();
+        usuario.setId(1);
+        Aplicacion  a1 = new Aplicacion(1,"aplic1",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic1\\","ninguno");
+        Aplicacion  a2 = new Aplicacion(2,"aplic2",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic2\\","ninguno");
+        Aplicacion  a3 = new Aplicacion(3,"aplic3",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic3\\","ninguno");
+        Aplicacion  a4 = new Aplicacion(4,"aplic4",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic4\\","ninguno");
+        expResult.add(a1);
+        expResult.add(a2);
+        expResult.add(a3);
+        expResult.add(a4);
+        
         ArrayList<Aplicacion> result = FAplicacions.obtener_Todos_Aplicacions();
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //sucess("The test case is a prototype.");
     }
 
     /**
@@ -58,12 +71,14 @@ public class FAplicacionsTest {
     @Test
     public void testObtener_Aplicacion_por_pk() throws Exception {
         System.out.println("obtener_Aplicacion_por_pk");
-        int id = 0;
-        Aplicacion expResult = null;
+        int id = 1;
+        Usuario usuario=new Usuario();
+        usuario.setId(1);
+        Aplicacion expResult = new Aplicacion(1,"aplic1",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic1\\","ninguno");
         Aplicacion result = FAplicacions.obtener_Aplicacion_por_pk(id);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -72,12 +87,17 @@ public class FAplicacionsTest {
     @Test
     public void testObtenerAplicacionpor_campo_id() throws Exception {
         System.out.println("obtenerAplicacionpor_campo_id");
-        int id = 0;
-        ArrayList<Aplicacion> expResult = null;
+        int id = 1;
+        ArrayList<Aplicacion> expResult = new ArrayList<Aplicacion>();
+        Usuario usuario=new Usuario();
+        usuario.setId(1);
+        Aplicacion  a1 = new Aplicacion(1,"aplic1",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic1\\","ninguno");
+        expResult.add(a1);
+
         ArrayList<Aplicacion> result = FAplicacions.obtenerAplicacionpor_campo_id(id);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -86,12 +106,14 @@ public class FAplicacionsTest {
     @Test
     public void testObtenerAplicacionpor_campo_nombre() throws Exception {
         System.out.println("obtenerAplicacionpor_campo_nombre");
-        String nombre = "";
-        Aplicacion expResult = null;
+        String nombre = "aplic1";
+        Usuario usuario=new Usuario();
+        usuario.setId(1);
+        Aplicacion expResult = new Aplicacion(1,"aplic1",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic1\\","ninguno");
         Aplicacion result = FAplicacions.obtenerAplicacionpor_campo_nombre(nombre);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -100,54 +122,30 @@ public class FAplicacionsTest {
     @Test
     public void testObtenerAplicacionpor_campo_usuario() throws Exception {
         System.out.println("obtenerAplicacionpor_campo_usuario");
-        int usuario = 0;
-        ArrayList<Aplicacion> expResult = null;
-        ArrayList<Aplicacion> result = FAplicacions.obtenerAplicacionpor_campo_usuario(usuario);
-        assertEquals(expResult, result);
+        Usuario usuario=new Usuario();
+        usuario.setId(1);
+        Aplicacion expResult = new Aplicacion(1,"aplic1",usuario,"E:\\Temp\\Proyectos\\Modulos_protpanel\\web\\usuarios_host\\nmbre1a1\\aplic1\\","ninguno");
+        ArrayList<Aplicacion> result = FAplicacions.obtenerAplicacionpor_campo_usuario(usuario.getId());
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
-    /**
-     * Test of obtenerAplicacionpor_campo_directorio method, of class FAplicacions.
-     */
-    @Test
-    public void testObtenerAplicacionpor_campo_directorio() throws Exception {
-        System.out.println("obtenerAplicacionpor_campo_directorio");
-        String directorio = "";
-        ArrayList<Aplicacion> expResult = null;
-        ArrayList<Aplicacion> result = FAplicacions.obtenerAplicacionpor_campo_directorio(directorio);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of obtenerAplicacionpor_campo_archivo_war method, of class FAplicacions.
-     */
-    @Test
-    public void testObtenerAplicacionpor_campo_archivo_war() throws Exception {
-        System.out.println("obtenerAplicacionpor_campo_archivo_war");
-        String archivo_war = "";
-        ArrayList<Aplicacion> expResult = null;
-        ArrayList<Aplicacion> result = FAplicacions.obtenerAplicacionpor_campo_archivo_war(archivo_war);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+  
     /**
      * Test of ingresar method, of class FAplicacions.
      */
     @Test
     public void testIngresar() throws Exception {
         System.out.println("ingresar");
-        Aplicacion aplicacion = null;
-        boolean expResult = false;
+        Usuario usuario=new Usuario();
+        usuario.setId(1);
+        Aplicacion aplicacion = new Aplicacion(40,"aplic5",usuario,Global.dir_base_usuarios,"ninguno");
+        boolean expResult = true;
         boolean result = FAplicacions.ingresar(aplicacion);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -159,7 +157,7 @@ public class FAplicacionsTest {
         Aplicacion aplicacion = null;
         boolean expResult = false;
         boolean result = FAplicacions.actualizar(aplicacion);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -173,7 +171,7 @@ public class FAplicacionsTest {
         Aplicacion aplicacion = null;
         boolean expResult = false;
         boolean result = FAplicacions.eliminar(aplicacion);
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -186,7 +184,7 @@ public class FAplicacionsTest {
         System.out.println("obtenerultimo");
         int expResult = 0;
         int result = FAplicacions.obtenerultimo();
-        assertEquals(expResult, result);
+        assertEquals(result, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

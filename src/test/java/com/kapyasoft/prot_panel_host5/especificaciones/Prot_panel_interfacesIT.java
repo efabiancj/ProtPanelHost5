@@ -631,7 +631,7 @@ public class Prot_panel_interfacesIT {
     {
         System.setProperty("webdriver.gecko.driver", Global.geckodriver);
         driver = new FirefoxDriver();
-        String url = Global.url_aplicacion + "registro_usuario" + Global.ext;
+        String url = Global.url_app + "registro_usuario" + Global.ext;
         driver.get(url);
 
         //Now you can Initialize marionette driver to launch firefox
@@ -725,7 +725,7 @@ public class Prot_panel_interfacesIT {
     public void testBoton_logueo() {
         System.setProperty("webdriver.gecko.driver", Global.geckodriver);
         driver = new FirefoxDriver();
-        String url = Global.url_aplicacion+"login"+Global.ext;
+        String url = Global.url_app+"login"+Global.ext;
         driver.get(url);   
         WebElement email  = driver.findElement(By.id("txtEmail"));
         WebElement clave  = driver.findElement(By.id("txtClave"));

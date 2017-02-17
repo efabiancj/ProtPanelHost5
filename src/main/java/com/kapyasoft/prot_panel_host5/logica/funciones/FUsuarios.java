@@ -92,7 +92,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 obj.setNickname(cres.getString("nickname"));
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por pk;");
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por nickname;");
         }
         return obj;
     }
@@ -492,23 +492,23 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
         return eje;
     }
     
-    public static boolean crear_usuario_pg(String nombre, String clave) throws Exception
-    {
-        String sql = "CREATE USER ? WITH password ?";
-        ArrayList<Parametro> lstpar = new ArrayList<Parametro>();
-        boolean eje = false;
-       
-        lstpar.add(new Parametro(1, nombre));
-        lstpar.add(new Parametro(2, clave));
-        
-        try {
-            eje = AccesoDatos.ejecutaComando1(sql, lstpar);
-            
-        } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en ingresar Usuario pg " + ex.getMessage());
-        }
-        return eje;
-    }
+//    public static boolean crear_usuario_pg(String nombre, String clave) throws Exception
+//    {
+//        String sql = "CREATE USER ? WITH PASSWORD ?";
+//        ArrayList<Parametro> lstpar = new ArrayList<Parametro>();
+//        boolean eje = false;
+//       
+//        lstpar.add(new Parametro(1, nombre));
+//        lstpar.add(new Parametro(2, clave));
+//        
+//        try {
+//            eje = AccesoDatos.ejecutaComando1(sql, lstpar);
+//            
+//        } catch (Exception ex) {
+//            throw new Exception("Error al ejecutar la sentencia en ingresar Usuario pg " + ex.getMessage());
+//        }
+//        return eje;
+//    }
     
 
     public static boolean actualizar(Usuario usuario) throws Exception {
