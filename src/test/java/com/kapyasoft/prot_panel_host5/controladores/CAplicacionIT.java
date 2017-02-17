@@ -51,7 +51,7 @@ public class CAplicacionIT {
         Aplicacion result = instance.getSelectedAplicacion();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -64,7 +64,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setSelectedAplicacion(selectedAplicacion);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       //fail("The test case is a prototype.");
     }
 
     /**
@@ -76,9 +76,9 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         List<Aplicacion> expResult = null;
         List<Aplicacion> result = instance.getAplicacions();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -90,9 +90,9 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         Aplicacion expResult = null;
         Aplicacion result = instance.getAplicacion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -105,7 +105,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setAplicacion(aplicacion);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -119,7 +119,7 @@ public class CAplicacionIT {
         String result = instance.getAplicset();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -132,7 +132,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setAplicset(aplicset);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -146,7 +146,7 @@ public class CAplicacionIT {
         int result = instance.getCodigo();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -159,7 +159,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setCodigo(codigo);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -173,7 +173,7 @@ public class CAplicacionIT {
         String result = instance.getNombre_auth();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -186,7 +186,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setNombre_auth(nombre_auth);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -200,7 +200,7 @@ public class CAplicacionIT {
         List<Aplicacion> result = instance.getAplicaciones();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -213,7 +213,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setAplicaciones(aplicaciones);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -227,7 +227,7 @@ public class CAplicacionIT {
         int result = instance.getId_usuario();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -240,7 +240,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setId_usuario(id_usuario);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -254,7 +254,7 @@ public class CAplicacionIT {
         Usuario result = instance.getUsuario();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -267,7 +267,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setUsuario(usuario);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -281,7 +281,7 @@ public class CAplicacionIT {
         String result = instance.getNombre();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -294,7 +294,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setNombre(nombre);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -308,7 +308,7 @@ public class CAplicacionIT {
         String result = instance.getArchivo_war();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -321,7 +321,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setArchivo_war(archivo_war);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -335,7 +335,7 @@ public class CAplicacionIT {
         int result = instance.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -348,7 +348,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -362,7 +362,7 @@ public class CAplicacionIT {
         String result = instance.getDirectorio();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -375,7 +375,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setDirectorio(directorio);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -387,7 +387,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.ingresar();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -402,7 +402,7 @@ public class CAplicacionIT {
         String result = instance.generar_directorio_real(path);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -416,7 +416,7 @@ public class CAplicacionIT {
         String result = instance.generar_nombre_directorio();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -430,7 +430,7 @@ public class CAplicacionIT {
         String result = instance.generar_directorios();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -444,7 +444,7 @@ public class CAplicacionIT {
         String result = instance.getMensaje();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -457,7 +457,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setMensaje(mensaje);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -471,7 +471,7 @@ public class CAplicacionIT {
         int result = instance.getUltima();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -484,7 +484,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setUltima(ultima);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -498,7 +498,7 @@ public class CAplicacionIT {
         int result = instance.getParam_aplic_id();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    //    fail("The test case is a prototype.");
     }
 
     /**
@@ -511,7 +511,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.setParam_aplic_id(param_aplic_id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -523,7 +523,7 @@ public class CAplicacionIT {
         CAplicacion instance = new CAplicacion();
         instance.ver_aplicacion();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
     
 }

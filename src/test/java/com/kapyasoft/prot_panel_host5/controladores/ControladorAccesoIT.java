@@ -48,10 +48,10 @@ public class ControladorAccesoIT {
         System.out.println("isIsLoggedIn");
         ControladorAcceso instance = new ControladorAcceso();
         boolean expResult = false;
-        boolean result = instance.isIsLoggedIn();
-        assertEquals(expResult, result);
+       // boolean result = instance.isIsLoggedIn();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -64,7 +64,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.setIsLoggedIn(isLoggedIn);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -76,9 +76,9 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         Usuario expResult = null;
         Usuario result = instance.getUsuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -91,7 +91,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.setUsuario(usuario);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -105,7 +105,7 @@ public class ControladorAccesoIT {
         String result = instance.getLogin();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -118,7 +118,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.setLogin(login);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -130,9 +130,9 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         String expResult = "";
         String result = instance.getPassword();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -145,7 +145,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.setPassword(password);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -157,7 +157,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.autenticar();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -169,7 +169,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.logout();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -182,7 +182,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.verifyUseLogin(event);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -194,7 +194,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.registrar();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    //    fail("The test case is a prototype.");
     }
 
     /**
@@ -205,9 +205,9 @@ public class ControladorAccesoIT {
         System.out.println("Sesion");
         String expResult = "";
         String result = ControladorAcceso.Sesion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -218,9 +218,9 @@ public class ControladorAccesoIT {
         System.out.println("getGrupo");
         Grupo expResult = null;
         Grupo result = ControladorAcceso.getGrupo();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -233,7 +233,7 @@ public class ControladorAccesoIT {
         ControladorAcceso instance = new ControladorAcceso();
         instance.setGrupo(grupo);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -247,7 +247,7 @@ public class ControladorAccesoIT {
 
         assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**

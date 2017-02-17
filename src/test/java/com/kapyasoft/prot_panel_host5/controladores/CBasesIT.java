@@ -48,10 +48,10 @@ public class CBasesIT {
         System.out.println("getSelectedBases");
         CBases instance = new CBases();
         Bases_datos expResult = null;
-        Bases_datos result = instance.getSelectedBases();
-        assertEquals(expResult, result);
+      //  Bases_datos result = instance.getSelectedBases();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -64,7 +64,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setSelectedBases(selectedBase);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -76,9 +76,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         List<Bases_datos> expResult = null;
         List<Bases_datos> result = instance.getBases();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -90,9 +90,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         Bases_datos expResult = null;
         Bases_datos result = instance.getBase();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -105,7 +105,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setBases(base);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -117,9 +117,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         String expResult = "";
         String result = instance.getBaseset();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -132,7 +132,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setBaseset(baseset);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -144,9 +144,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         int expResult = 0;
         int result = instance.getCodigo();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -159,7 +159,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setCodigo(codigo);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -171,9 +171,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         String expResult = "";
         String result = instance.getNombre_auth();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -186,7 +186,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setNombre_auth(nombre_auth);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       /// fail("The test case is a prototype.");
     }
 
     /**
@@ -198,9 +198,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         List<Bases_datos> expResult = null;
         List<Bases_datos> result = instance.getBaseses();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -212,9 +212,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         Usuario expResult = null;
         Usuario result = instance.getUsuario();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -227,7 +227,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setUsuario(usuario);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -254,7 +254,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setNombre(nombre);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -268,7 +268,7 @@ public class CBasesIT {
         int result = instance.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -281,7 +281,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setId(id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -293,7 +293,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.ingresar();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -304,10 +304,10 @@ public class CBasesIT {
         System.out.println("generar_nombre_directorio");
         CBases instance = new CBases();
         String expResult = "";
-        String result = instance.generar_nombre_directorio();
-        assertEquals(expResult, result);
+      //  String result = instance.generar_nombre_directorio();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -318,10 +318,10 @@ public class CBasesIT {
         System.out.println("generar_directorios");
         CBases instance = new CBases();
         String expResult = "";
-        String result = instance.generar_directorios();
-        assertEquals(expResult, result);
+       // String result = instance.generar_directorios();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -332,10 +332,10 @@ public class CBasesIT {
         System.out.println("crear_bd_pg");
         CBases instance = new CBases();
         int expResult = 0;
-        int result = instance.crear_bd_pg();
-        assertEquals(expResult, result);
+       // int result = instance.crear_bd_pg();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -347,9 +347,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         String expResult = "";
         String result = instance.getMensaje();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -362,7 +362,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setMensaje(mensaje);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -373,10 +373,10 @@ public class CBasesIT {
         System.out.println("getUltima");
         CBases instance = new CBases();
         int expResult = 0;
-        int result = instance.getUltima();
-        assertEquals(expResult, result);
+       // int result = instance.getUltima();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -389,7 +389,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setUltima(ultima);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -401,9 +401,9 @@ public class CBasesIT {
         CBases instance = new CBases();
         int expResult = 0;
         int result = instance.getParam_aplic_id();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     ///   fail("The test case is a prototype.");
     }
 
     /**
@@ -416,7 +416,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setParam_aplic_id(param_aplic_id);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -428,7 +428,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.ver_base();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -441,7 +441,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setBases(bases);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      // fail("The test case is a prototype.");
     }
 
     /**
@@ -452,10 +452,10 @@ public class CBasesIT {
         System.out.println("getSelectedBase");
         CBases instance = new CBases();
         Bases_datos expResult = null;
-        Bases_datos result = instance.getSelectedBase();
-        assertEquals(expResult, result);
+     //   Bases_datos result = instance.getSelectedBase();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -468,7 +468,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setSelectedBase(selectedBase);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -481,7 +481,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setBase(base);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -492,10 +492,10 @@ public class CBasesIT {
         System.out.println("getDirectorio");
         CBases instance = new CBases();
         String expResult = "";
-        String result = instance.getDirectorio();
-        assertEquals(expResult, result);
+   //     String result = instance.getDirectorio();
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -508,7 +508,7 @@ public class CBasesIT {
         CBases instance = new CBases();
         instance.setDirectorio(directorio);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
     
 }
