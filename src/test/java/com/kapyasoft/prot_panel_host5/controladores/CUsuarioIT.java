@@ -520,10 +520,24 @@ public class CUsuarioIT {
      * Test of ingresar_usuario method, of class CUsuario.
      */
     @Test
-    public void testIngresar_usuario() {
+    public void testIngresar_usuario() throws Exception {
         System.out.println("ingresar_usuario");
         CUsuario instance = new CUsuario();
         instance.ingresar_usuario();
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of controlar_nickname method, of class CUsuario.
+     */
+    @Test
+    public void testControlar_nickname() {
+        System.out.println("controlar_nickname");
+        CUsuario instance = new CUsuario();
+        boolean expResult = false;
+        boolean result = instance.controlar_nickname();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
@@ -543,15 +557,152 @@ public class CUsuarioIT {
     }
 
     /**
-     * Test of generar_directorios method, of class CUsuario.
+     * Test of generar_sugerencia_nickname method, of class CUsuario.
      */
     @Test
-    public void testGenerar_directorios() {
-        System.out.println("generar_directorios");
+    public void testGenerar_sugerencia_nickname() {
+        System.out.println("generar_sugerencia_nickname");
         CUsuario instance = new CUsuario();
         String expResult = "";
-        String result = instance.generar_directorio_ftp_real(expResult);
+        String result = instance.generar_sugerencia_nickname();
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of generar_directorio_ftp_real method, of class CUsuario.
+     */
+    @Test
+    public void testGenerar_directorio_ftp_real() {
+        System.out.println("generar_directorio_ftp_real");
+        String path = "";
+        CUsuario instance = new CUsuario();
+        String expResult = "";
+        String result = instance.generar_directorio_ftp_real(path);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of crear_usuario_bd method, of class CUsuario.
+     */
+    @Test
+    public void testCrear_usuario_bd() {
+        System.out.println("crear_usuario_bd");
+        CUsuario instance = new CUsuario();
+        int expResult = 0;
+        int result = instance.crear_usuario_bd();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getNickname method, of class CUsuario.
+     */
+    @Test
+    public void testGetNickname() {
+        System.out.println("getNickname");
+        CUsuario instance = new CUsuario();
+        String expResult = "";
+        String result = instance.getNickname();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setNickname method, of class CUsuario.
+     */
+    @Test
+    public void testSetNickname() {
+        System.out.println("setNickname");
+        String nickname = "";
+        CUsuario instance = new CUsuario();
+        instance.setNickname(nickname);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getUltimo method, of class CUsuario.
+     */
+    @Test
+    public void testGetUltimo() {
+        System.out.println("getUltimo");
+        CUsuario instance = new CUsuario();
+        int expResult = 0;
+        int result = instance.getUltimo();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setUltimo method, of class CUsuario.
+     */
+    @Test
+    public void testSetUltimo() {
+        System.out.println("setUltimo");
+        int ultimo = 0;
+        CUsuario instance = new CUsuario();
+        instance.setUltimo(ultimo);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getSugerencia method, of class CUsuario.
+     */
+    @Test
+    public void testGetSugerencia() {
+        System.out.println("getSugerencia");
+        CUsuario instance = new CUsuario();
+        String expResult = "";
+        String result = instance.getSugerencia();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setSugerencia method, of class CUsuario.
+     */
+    @Test
+    public void testSetSugerencia() {
+        System.out.println("setSugerencia");
+        String sugerencia = "";
+        CUsuario instance = new CUsuario();
+        instance.setSugerencia(sugerencia);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getClaveRep method, of class CUsuario.
+     */
+    @Test
+    public void testGetClaveRep() {
+        System.out.println("getClaveRep");
+        CUsuario instance = new CUsuario();
+        String expResult = "";
+        String result = instance.getClaveRep();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setClaveRep method, of class CUsuario.
+     */
+    @Test
+    public void testSetClaveRep() {
+        System.out.println("setClaveRep");
+        String claveRep = "";
+        CUsuario instance = new CUsuario();
+        instance.setClaveRep(claveRep);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }

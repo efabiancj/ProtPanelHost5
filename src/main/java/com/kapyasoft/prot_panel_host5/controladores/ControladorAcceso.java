@@ -10,10 +10,6 @@ package com.kapyasoft.prot_panel_host5.controladores;
  * @author Edgar
  */
 
-import com.kapyasoft.prot_panel_host5.logica.clases.Grupo;
-import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
-import com.kapyasoft.prot_panel_host5.logica.funciones.FAutenticacion;
-import com.kapyasoft.prot_panel_host5.logica.funciones.FUsuarios;
 import java.io.IOException;
 import java.util.List;
 import javax.faces.application.FacesMessage;
@@ -23,6 +19,12 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ComponentSystemEvent;
 import javax.servlet.http.HttpSession;
+
+import clases_utiles.FStrings;
+import com.kapyasoft.prot_panel_host5.logica.clases.Grupo;
+import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
+import com.kapyasoft.prot_panel_host5.logica.funciones.FAutenticacion;
+import com.kapyasoft.prot_panel_host5.logica.funciones.FUsuarios;
 
 
 
@@ -200,14 +202,6 @@ public class ControladorAcceso {
 
     public void setGrupo(Grupo grupo) {
         this.grupo = grupo;
-    }
-
-    void setMensaje(String mensaje) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    String getMensaje() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
       

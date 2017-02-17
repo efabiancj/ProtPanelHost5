@@ -16,6 +16,7 @@ import com.kapyasoft.prot_panel_host5.especificaciones.Prot_panel_host;
 import com.kapyasoft.prot_panel_host5.logica.clases.Ciudad;
 import com.kapyasoft.prot_panel_host5.logica.clases.Grupo;
 import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
+import com.kapyasoft.prot_panel_host5.logica.funciones.FBases_datoss;
 import com.kapyasoft.prot_panel_host5.logica.funciones.FCiudads;
 import com.kapyasoft.prot_panel_host5.logica.funciones.FUsuarios;
 
@@ -31,7 +32,6 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ViewScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
-
 
 /**
  *
@@ -67,7 +67,6 @@ public  class CUsuario implements Serializable{
     private int ultimo;
     private String sugerencia;
     private String claveRep;
- 
     public CUsuario() {
         mensaje = "";
         grupo= new Grupo();
@@ -97,10 +96,7 @@ public  class CUsuario implements Serializable{
         id = ultimo+1 ;
     }
 
-      public String borrar_ultimos_caracteres(String d,String f)
-      {
-          return "";
-      }
+  
 
     public String getCiudset() {
         return ciudset;
@@ -110,10 +106,7 @@ public  class CUsuario implements Serializable{
         this.ciudset = ciudset;
     }
 
-     public String borrar_ultimos_caracteres()
-     {
-         return "";
-     }
+
    
     public String getMensaje() {
         return mensaje;
@@ -259,7 +252,7 @@ public  class CUsuario implements Serializable{
     
     
     
-    public void ingresar_usuario() {
+    public void ingresar_usuario() throws Exception {
         
         Usuario repetido = null;
         usuario = new Usuario();
@@ -384,7 +377,8 @@ public  class CUsuario implements Serializable{
         int res=0;
         try
         {
-            
+            FBases_datoss.crear_usuario_base_datos_pg(usuario.getNickname(),usuario.getClave());
+            FBases_datoss.asignar_permisos_usario_crear_bd_pg(usuario.getNickname());
         }
         catch(Exception ex)
         {
