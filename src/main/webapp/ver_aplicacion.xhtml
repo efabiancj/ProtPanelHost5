@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<ui:composition template="panel_cliente.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:define name="pag_panel">
+        <f:view contentType="text/html">
+            <h:head>
+            </h:head>
+            <h:body>
+                <div class="registro" >
+                    <div id="id_form">
+                        <h:form>
+                            <table  class="table_registro">
+                                <tr  class="tr1">
+                                <td >
+                                <h:outputText id="lblid" value="id: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <h:outputText  id="txtid"  value="#{cVerAplicacion.id}"> </h:outputText>
+                                </td>
+                                </tr>
+
+                                <tr  class="tr2">
+                                    <td >
+                                <h:outputText id="lblNombre" value="Nombre: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <h:outputText styleClass="txtNombre" id="txtNombre"   value="#{cVerAplicacion.nombre}"> </h:outputText>
+                                </td>
+                                </tr>
+
+                                <tr  class="tr1">
+                                    <td >
+                                <h:outputText id="Usuario" value="Usuario: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <h:outputText  id="txtUsuario"  value="#{cVerAplicacion.usuario.apellidos}"> </h:outputText>
+                                </td>
+                                </tr>
+
+                            </table>
+
+                            <h3>Instancia</h3>
+                            <table>
+
+                                <tr  class="tr1">
+                                    <td >
+                                <h:outputText  value="Directorio:"> </h:outputText>
+                                <h:outputText  id="txtDirectorio"  value="#{cVerAplicacion.directorio}"> </h:outputText>
+                                </td>
+                                </tr>
+                                <tr  class="tr1">
+                                    <td >
+                                <h:outputText  value="archivo subido : "> </h:outputText>
+                                <h:outputText  value="#{cVerAplicacion.archivo_subido}"> </h:outputText>
+                                </td>
+                                </tr>
+                                <tr  class="tr1">
+                                    <td >
+                                <h:outputText  value="archivo desplegado:"> </h:outputText>
+                                <h:outputText  id="txtArchivoWar"  value="#{cVerAplicacion.archivo_war}"> </h:outputText>
+                                
+                                </td>
+                                <td>
+                                    <h:outputText  value=" lanzar aplicacion:"> </h:outputText>
+                                    <a href="#{cVerAplicacion.enlace_generado}" target="_blank"> #{cVerAplicacion.enlace_generado}</a> 
+                                </td>
+                                </tr>
+                                <tr  class="tr1">
+                                    <td >
+
+                                <p:commandButton id="btnSubir" value="subir" disabled="false" action="#{cVerAplicacion.subir()}" />
+                                
+                                <p:commandButton id="btnUndeploy" value="anular desplegar" disabled="false" action="#{cVerAplicacion.undeploy()}" />     
+                                </td>
+                                </tr>
+                            </table>
+                            <h3>Codigo fuente</h3>
+                            
+                            <div>
+                                <h3>Contenido</h3>
+                                <table>
+                                    <tr>    
+                                    <td>
+                                    <p:commandButton value="guardar"   action="#{cVerAplicacion.guardar()}" />
+                                    <p:commandButton value="construir"  action="#{cVerAplicacion.construir()}" />
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td>
+                                    <p:inputTextarea id="ita_cont_arch" rows="6" cols="33" value="#{cVerAplicacion.contenido_archivo_select}" />
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                    <h:selectOneMenu value="#{bean.tipo_archivo}" >
+                                        <f:selectItem itemValue="W" itemLabel=".war" />
+                                        <f:selectItem itemValue="C" itemLabel="codigo" />
+                                    </h:selectOneMenu> 
+                                    </td>
+                                    <td>
+                                    <p:commandButton id="btnDesplegarSub" value="desplegar" disabled="false" action="#{cVerAplicacion.desplegar()}" />
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </h:form>
+                    </div>
+
+                    <div id="divmensajes">
+                        <h:outputText value="." id="lblmensaje" style="color:red" />
+                    </div>
+                </div>        
+            </h:body>
+        </f:view>
+    </ui:define>
+</ui:composition>

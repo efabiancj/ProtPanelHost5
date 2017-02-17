@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <f:view contentType="text/html">
+        
+        <f:event listener="#{controladorAcceso.verifyUseLogin(event)}" type="preRenderView"></f:event>
+    <h:body>
+        <p:commandButton action="#{controladorAcceso.logout()}" value="Salir"> </p:commandButton>
+        <li><a id="link_Aplicaciones" href="aplicaciones.xhtml">Aplicaciones</a></li>
+        <li><a id="link_Bases" href="bases.xhtml">BDs</a></li>
+        <li><a id="link_Dominios" href="dminios.xhtml">Dominios</a></li>
+        <li><a id="link_Reporte_cosumo" href="reportes_consumo.xhtml">REporte consumo</a></li>
+        <li><a id="link_Reporte_pagos" href="reportes_pagos.xhtml">Reporte pagos</a></li>
+          
+        
+        <div id="contenido">
+             <!--inicio traza -->
+              <div >
+                   <ui:insert name="pag_panel"> 
+
+                   </ui:insert>
+               </div>
+         </div> <!--contenido-->
+        </h:body>
+    </f:view>
+</html>
+

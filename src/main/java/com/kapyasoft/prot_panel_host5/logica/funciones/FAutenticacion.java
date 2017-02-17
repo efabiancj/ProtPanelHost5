@@ -15,7 +15,6 @@ import acceso.Parametro;
 import com.kapyasoft.prot_panel_host5.logica.clases.Usuario;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author efabiancj

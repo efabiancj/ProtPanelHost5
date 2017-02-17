@@ -12,7 +12,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-
 public class FBases_datoss {
 
     public static ArrayList<Bases_datos> obtener_Todos_Bases_datoss() throws Exception {

@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class FUsuarios {
 
     public static ArrayList<Usuario> obtener_Todos_Usuarios() throws Exception {
+        System.out.println("intentand recuperar todos los usuarios");
         ArrayList<Usuario> lst = new ArrayList<Usuario>();
         Usuario obj = null;
         ConjuntoResultado cres = null;
@@ -34,6 +35,7 @@ public class FUsuarios {
                 lst.add(obj);
             }
         } catch (Exception ex) {
+            System.out.println("error "+ex.getMessage());
             throw new Exception("Error al ejecutar la sentencia en Obtener todos los Usuario"+ex.getMessage());
         }
         return lst;
@@ -92,7 +94,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 obj.setNickname(cres.getString("nickname"));
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por nickname;"+ex.getMessage());
+            throw new Exception("Error al ejecutar la sentencia en buscar Usuario por nickname;");
         }
         return obj;
     }
@@ -536,7 +538,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 eje = true;
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en actualizar Usuario "+ex.getMessage());
+            throw new Exception("Error al ejecutar la sentencia en actualizar Usuario ");
         }
         return eje;
     }
@@ -554,7 +556,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 eje = true;
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en eliminar Usuario "+ex.getMessage());
+            throw new Exception("Error al ejecutar la sentencia en eliminar Usuario ");
         }
         return eje;
     }
@@ -570,7 +572,7 @@ public static Usuario obtener_Usuario_por_nickname(String nickname) throws Excep
                 res = cres.getInt(0);
             }
         } catch (Exception ex) {
-            throw new Exception("Error al ejecutar la sentencia en buscar ultimo usuario;"+ex.getMessage());
+            throw new Exception("Error al ejecutar la sentencia en buscar ultimo usuario;");
         }
         return res;
     }

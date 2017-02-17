@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<ui:composition template="panel_cliente.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <ui:define name="pag_panel">
+        <f:view contentType="text/html">
+            <h:head>
+            </h:head>
+            <h:body>
+                <div class="registro" >
+                    <div id="id_form">
+                        <h:form>
+                            <table  class="table_registro">
+                                <tr  class="tr1">
+                                    <td >
+                                <h:outputText id="lblid" value="id: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <h:outputText  id="txtid"  value="#{cVerBase.id}"> </h:outputText>
+                                </td>
+                                </tr>
+
+                                <tr  class="tr2">
+                                    <td >
+                                <h:outputText id="lblNombre" value="Nombre: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <h:outputText styleClass="txtNombre" id="txtNombre"   value="#{cVerBase.nombre}"> </h:outputText>
+                                </td>
+                                </tr>
+
+                                <tr  class="tr1">
+                                    <td >
+                                <h:outputText id="Usuario" value="Usuario: " class="labels"> </h:outputText>
+                                </td>
+                                <td>
+                                <h:outputText  id="txtUsuario"  value="#{cVerBase.usuario.apellidos}"> </h:outputText>
+                                </td>
+                                </tr>
+
+                            </table>
+
+                            <h3>Instancia</h3>
+                            <table>
+
+                                <tr  class="tr1">
+                                <td >
+                                <h:outputText  value="archivo subido : "> </h:outputText>
+                                <h:outputText  value="#{cVerBase.archivo_subido}"> </h:outputText>
+                                </td>
+                                </tr>
+                                
+                                
+                                <tr  class="tr1">
+                                <td >
+                                <h:outputText  value="Estado: "> </h:outputText>
+                                <h:outputText  value="#{cVerBase.estado}"> </h:outputText>
+                                </td>
+                                </tr>
+                                
+                                
+                                <tr  class="tr1">
+                                <td >
+                                <p:commandButton id="btnSubir" value="subir" disabled="false" action="#{cVerBase.subir()}" />
+                                <p:commandButton id="btnRestaurar" value="restaurar" disabled="false" action="#{cVerBase.restaurar()}" />
+                                <p:commandButton id="btnRespaldar" value="respaldar" disabled="false" action="#{cVerBase.respaldar()}" />    
+                                <p:commandButton id="btnEliminar" value="eliminar" disabled="false" action="#{cVerBase.eliminar()}" /> 
+                                </td>
+                                </tr>
+                            </table>
+                          
+                               <div>
+                                <h3>Datos de conexion con su aplicacion</h3>
+                                <table>
+                                    <tr>    
+                                    <td>
+                                    <p:commandButton value="copiar en portapapeles"   action="#{cVerBase.copiar_en_portapapeles}" />
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                    <td>
+                                    <p:inputTextarea id="ita_cont_arch" rows="6" cols="33" value="#{cVerBase.info_conexion}" />
+                                    </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </h:form>
+                    </div>
+
+                    <div id="divmensajes">
+                        <h:outputText value="." id="lblmensaje" style="color:red" />
+                    </div>
+                </div>        
+            </h:body>
+        </f:view>
+    </ui:define>
+</ui:composition>

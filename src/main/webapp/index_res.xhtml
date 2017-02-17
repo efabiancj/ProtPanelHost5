@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui" 
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+    <f:view contentType="text/html">
+    <h:body>
+    
+        <li><a id="link_auth" href="faces/login.xhtml">Autenticarse</a></li>
+        <li><a id="link_reg" href="faces/registro_usuario.xhtml">Registrarse</a></li>
+  
+        
+        <div id="contenido">
+             <!--inicio traza -->
+              <div >
+                   <ui:insert name="pag"> 
+
+                   </ui:insert>
+               </div>
+         </div> <!--contenido-->
+        </h:body>
+    </f:view>
+</html>
+
