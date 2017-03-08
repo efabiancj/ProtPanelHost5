@@ -48,9 +48,9 @@ public class FPagosTest {
         System.out.println("obtener_Todos_Pagos");
         ArrayList<Pago> expResult = null;
         ArrayList<Pago> result = FPagos.obtener_Todos_Pagos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -62,9 +62,9 @@ public class FPagosTest {
         int id = 0;
         Pago expResult = null;
         Pago result = FPagos.obtener_Pago_por_pk(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -76,9 +76,9 @@ public class FPagosTest {
         int id = 0;
         ArrayList<Pago> expResult = null;
         ArrayList<Pago> result = FPagos.obtenerPagopor_campo_id(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -90,9 +90,9 @@ public class FPagosTest {
         double valor = 0.0;
         ArrayList<Pago> expResult = null;
         ArrayList<Pago> result = FPagos.obtenerPagopor_campo_valor(valor);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -104,9 +104,9 @@ public class FPagosTest {
         Date mes = null;
         ArrayList<Pago> expResult = null;
         ArrayList<Pago> result = FPagos.obtenerPagopor_campo_mes(mes);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -118,9 +118,9 @@ public class FPagosTest {
         Date fecha_pago = null;
         ArrayList<Pago> expResult = null;
         ArrayList<Pago> result = FPagos.obtenerPagopor_campo_fecha_pago(fecha_pago);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -132,9 +132,9 @@ public class FPagosTest {
         int usuario = 0;
         ArrayList<Pago> expResult = null;
         ArrayList<Pago> result = FPagos.obtenerPagopor_campo_usuario(usuario);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**

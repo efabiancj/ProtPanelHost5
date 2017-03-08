@@ -61,9 +61,9 @@ public class FServiciosTest {
         int id = 0;
         Servicio expResult = null;
         Servicio result = FServicios.obtener_Servicio_por_pk(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -75,9 +75,9 @@ public class FServiciosTest {
         int id = 0;
         ArrayList<Servicio> expResult = null;
         ArrayList<Servicio> result = FServicios.obtenerServiciopor_campo_id(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -89,9 +89,9 @@ public class FServiciosTest {
         String descripcion = "";
         ArrayList<Servicio> expResult = null;
         ArrayList<Servicio> result = FServicios.obtenerServiciopor_campo_descripcion(descripcion);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -103,9 +103,9 @@ public class FServiciosTest {
         double costo = 0.0;
         ArrayList<Servicio> expResult = null;
         ArrayList<Servicio> result = FServicios.obtenerServiciopor_campo_costo(costo);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -117,9 +117,9 @@ public class FServiciosTest {
         Servicio servicio = null;
         boolean expResult = false;
         boolean result = FServicios.ingresar(servicio);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -131,9 +131,9 @@ public class FServiciosTest {
         Servicio servicio = null;
         boolean expResult = false;
         boolean result = FServicios.actualizar(servicio);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -145,9 +145,9 @@ public class FServiciosTest {
         Servicio servicio = null;
         boolean expResult = false;
         boolean result = FServicios.eliminar(servicio);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
     
 }

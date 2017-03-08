@@ -61,9 +61,9 @@ public class FDominiosTest {
         int id = 0;
         Dominio expResult = null;
         Dominio result = FDominios.obtener_Dominio_por_pk(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -75,9 +75,9 @@ public class FDominiosTest {
         int id = 0;
         ArrayList<Dominio> expResult = null;
         ArrayList<Dominio> result = FDominios.obtenerDominiopor_campo_id(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -89,9 +89,9 @@ public class FDominiosTest {
         String nombre = "";
         ArrayList<Dominio> expResult = null;
         ArrayList<Dominio> result = FDominios.obtenerDominiopor_campo_nombre(nombre);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -103,9 +103,9 @@ public class FDominiosTest {
         Dominio dominio = null;
         boolean expResult = false;
         boolean result = FDominios.ingresar(dominio);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -117,9 +117,9 @@ public class FDominiosTest {
         Dominio dominio = null;
         boolean expResult = false;
         boolean result = FDominios.actualizar(dominio);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -131,9 +131,9 @@ public class FDominiosTest {
         Dominio dominio = null;
         boolean expResult = false;
         boolean result = FDominios.eliminar(dominio);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
     
 }

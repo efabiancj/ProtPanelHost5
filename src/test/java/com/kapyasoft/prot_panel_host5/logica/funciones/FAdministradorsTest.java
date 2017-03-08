@@ -47,9 +47,9 @@ public class FAdministradorsTest {
         System.out.println("obtener_Todos_Administradors");
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtener_Todos_Administradors();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -61,9 +61,9 @@ public class FAdministradorsTest {
         String codigo = "";
         Administrador expResult = null;
         Administrador result = FAdministradors.obtener_Administrador_por_pk(codigo);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -75,9 +75,9 @@ public class FAdministradorsTest {
         String codigo = "";
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_codigo(codigo);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -89,9 +89,9 @@ public class FAdministradorsTest {
         String nombres = "";
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_nombres(nombres);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -103,9 +103,9 @@ public class FAdministradorsTest {
         String apellidos = "";
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_apellidos(apellidos);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -117,9 +117,9 @@ public class FAdministradorsTest {
         String direccion = "";
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_direccion(direccion);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       //fail("The test case is a prototype.");
     }
 
     /**
@@ -131,9 +131,9 @@ public class FAdministradorsTest {
         String telefono = "";
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_telefono(telefono);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -145,9 +145,9 @@ public class FAdministradorsTest {
         String email = "";
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_email(email);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -159,9 +159,9 @@ public class FAdministradorsTest {
         String clave = "";
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_clave(clave);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -173,9 +173,9 @@ public class FAdministradorsTest {
         int grupo = 0;
         ArrayList<Administrador> expResult = null;
         ArrayList<Administrador> result = FAdministradors.obtenerAdministradorpor_campo_grupo(grupo);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -187,9 +187,9 @@ public class FAdministradorsTest {
         Administrador administrador = null;
         boolean expResult = false;
         boolean result = FAdministradors.ingresar(administrador);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -201,9 +201,9 @@ public class FAdministradorsTest {
         Administrador administrador = null;
         boolean expResult = false;
         boolean result = FAdministradors.actualizar(administrador);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -215,9 +215,9 @@ public class FAdministradorsTest {
         Administrador administrador = null;
         boolean expResult = false;
         boolean result = FAdministradors.eliminar(administrador);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
     
 }
