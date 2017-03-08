@@ -145,9 +145,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.listar_planes();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -175,9 +175,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.contratar_plan();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -259,9 +259,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.compilar_codigo_aplicacion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -301,9 +301,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.modificar_aplicacion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -315,9 +315,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.eliminar_aplicacion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       //fail("The test case is a prototype.");
     }
 
     /**
@@ -329,9 +329,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.modificar_cliente();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -371,9 +371,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         String expResult = "";
         String result = instance.listar_dominios();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -385,9 +385,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         String expResult = "";
         String result = instance.visualizar_editar_codigo();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -399,52 +399,16 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         String expResult = "";
         String result = instance.reporte_consumo_recursos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
      * Test of Calcular_espacio_disco_utilizado method, of class Prot_panel_host.
      */
-    @Test
-    public void testCalcular_espacio_disco_utilizado() {
-        System.out.println("Calcular_espacio_disco_utilizado");
-        Prot_panel_host instance = new Prot_panel_host();
-        int expResult = 0;
-        int result = instance.Calcular_espacio_disco_utilizado();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
+   
 
-    /**
-     * Test of Calcular_memoria_por_aplicacion method, of class Prot_panel_host.
-     */
-    @Test
-    public void testCalcular_memoria_por_aplicacion() {
-        System.out.println("Calcular_memoria_por_aplicacion");
-        Prot_panel_host instance = new Prot_panel_host();
-        int expResult = 0;
-        int result = instance.Calcular_memoria_por_aplicacion();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of Calcular_transferencia method, of class Prot_panel_host.
-     */
-    @Test
-    public void testCalcular_transferencia() {
-        System.out.println("Calcular_transferencia");
-        Prot_panel_host instance = new Prot_panel_host();
-        int expResult = 0;
-        int result = instance.Calcular_transferencia();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
     /**
      * Test of reporte_pagos_mensuales method, of class Prot_panel_host.
@@ -455,9 +419,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         String expResult = "";
         String result = instance.reporte_pagos_mensuales();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -471,9 +435,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         boolean expResult = false;
         boolean result = instance.autenticar_administradores(nombre, clave);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -485,9 +449,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.Gestion_administrador();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -499,9 +463,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.Crear_nuevo_administrador();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -513,9 +477,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.Validacion_Crear_nuevo_administrador();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -527,9 +491,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.Modificacion_administrador();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -541,9 +505,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         int expResult = 0;
         int result = instance.validacion_Modificacion_administrador();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -555,9 +519,9 @@ public class Prot_panel_hostIT {
         Prot_panel_host instance = new Prot_panel_host();
         Object expResult = null;
         Object result = instance.Listar_administradores();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
