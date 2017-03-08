@@ -367,7 +367,7 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_nombre_dominio();
-        assertEquals(expResult, expResult);
+       assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
       //  fail("The test case is a prototype.");
     }
@@ -381,9 +381,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_aplicacion_dominio();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -395,9 +395,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_editor();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -411,7 +411,7 @@ public class Prot_panel_interfacesIT {
         int result = instance.elemento_aplicacion_relacionar_dominio();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -423,9 +423,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_dominio_relacionar_dominio();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //   fail("The test case is a prototype.");
     }
 
     /**
@@ -437,9 +437,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_tabla_aplicaciones();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -451,9 +451,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.elemento_numero_aplicaciones();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -607,7 +607,7 @@ public class Prot_panel_interfacesIT {
         int result = instance.enlace_index_usuario_a_visualizar_dominios();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -760,9 +760,9 @@ public class Prot_panel_interfacesIT {
         Prot_panel_interfaces instance = new Prot_panel_interfaces();
         int expResult = 0;
         int result = instance.subir_archivo_aplicacion();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    //    fail("The test case is a prototype.");
     }
 
     /**

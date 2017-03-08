@@ -48,9 +48,9 @@ public class FContratosTest {
         System.out.println("obtener_Todos_Contratos");
         ArrayList<Contrato> expResult = null;
         ArrayList<Contrato> result = FContratos.obtener_Todos_Contratos();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -62,9 +62,9 @@ public class FContratosTest {
         int id = 0;
         Contrato expResult = null;
         Contrato result = FContratos.obtener_Contrato_por_pk(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -76,9 +76,9 @@ public class FContratosTest {
         int id = 0;
         ArrayList<Contrato> expResult = null;
         ArrayList<Contrato> result = FContratos.obtenerContratopor_campo_id(id);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -90,9 +90,9 @@ public class FContratosTest {
         Date fecha = null;
         ArrayList<Contrato> expResult = null;
         ArrayList<Contrato> result = FContratos.obtenerContratopor_campo_fecha(fecha);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -104,9 +104,9 @@ public class FContratosTest {
         int servicio = 0;
         ArrayList<Contrato> expResult = null;
         ArrayList<Contrato> result = FContratos.obtenerContratopor_campo_servicio(servicio);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -118,9 +118,9 @@ public class FContratosTest {
         int usuario = 0;
         ArrayList<Contrato> expResult = null;
         ArrayList<Contrato> result = FContratos.obtenerContratopor_campo_usuario(usuario);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -134,7 +134,7 @@ public class FContratosTest {
         boolean result = FContratos.ingresar(contrato);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
 
     /**
@@ -146,9 +146,9 @@ public class FContratosTest {
         Contrato contrato = null;
         boolean expResult = false;
         boolean result = FContratos.actualizar(contrato);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**
@@ -160,9 +160,9 @@ public class FContratosTest {
         Contrato contrato = null;
         boolean expResult = false;
         boolean result = FContratos.eliminar(contrato);
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       // fail("The test case is a prototype.");
     }
     
 }

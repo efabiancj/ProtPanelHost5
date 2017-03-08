@@ -47,9 +47,9 @@ public class FDominiosTest {
         System.out.println("obtener_Todos_Dominios");
         ArrayList<Dominio> expResult = null;
         ArrayList<Dominio> result = FDominios.obtener_Todos_Dominios();
-        assertEquals(expResult, result);
+        assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**

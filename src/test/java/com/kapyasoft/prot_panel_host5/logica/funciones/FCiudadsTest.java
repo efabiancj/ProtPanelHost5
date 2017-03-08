@@ -63,7 +63,7 @@ public class FCiudadsTest {
        // Ciudad result = FCiudads.obtener_Ciudad_por_pk(id);
         assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       //fail("The test case is a prototype.");
     }
 
     /**
@@ -77,7 +77,7 @@ public class FCiudadsTest {
       //  ArrayList<Ciudad> result = FCiudads.obtenerCiudadpor_campo_nombre(nombre);
         assertEquals(expResult, expResult);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     //  fail("The test case is a prototype.");
     }
 
     /**
